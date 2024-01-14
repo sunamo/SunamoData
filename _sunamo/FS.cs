@@ -51,7 +51,7 @@ internal class FS
         }
 
         StringBuilder sbExt = new StringBuilder();
-        string ext = Path.GetExtension(p);
+        string ext = FS.GetExtension(p);
         if (ext == string.Empty)
         {
             return p;
