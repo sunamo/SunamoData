@@ -1,6 +1,6 @@
-using FromToUse = SunamoEnums.Enums.FromToUse;
+//using FromToUse = SunamoEnums.Enums.FromToUse;
 
-namespace SunamoData.Data;
+//namespace SunamoData.Data;
 
 
 public class FromToTSH<T>

@@ -11,9 +11,9 @@ public class StringInt : Parsing<string, int>
     /// <param name="obsah"></param>
     public override void ParsujM(string obsah)
     {
-        if (obsah.Contains(SF.separatorString))
+        if (obsah.Contains("|"))
         {
-            var fd = SF.GetAllElementsLine(obsah, null);
+            var fd = SHSE.Split(obsah, "|"); //SF.GetAllElementsLine(obsah, null);
             t1 = fd[0];
             t2 = int.Parse(fd[1]);
         }

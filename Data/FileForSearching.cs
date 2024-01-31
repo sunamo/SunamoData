@@ -26,6 +26,10 @@ void
 await
 #endif
 File.ReadAllLinesAsync(path)).ToList();
-        linesLower = CA.ToLower(lines);
+        linesLower = new List<string>(lines.Count);
+        foreach (var item in lines)
+        {
+            linesLower.Add(item.ToLower());
+        }
     }
 }

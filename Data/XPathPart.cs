@@ -1,5 +1,3 @@
-using SunamoStringSubstring;
-
 namespace SunamoData.Data;
 
 public class XPathPart
@@ -16,7 +14,7 @@ public class XPathPart
         if (dexStartSquareBracket != -1 && dexEndSquareBracket != -1)
         {
             tag = part.Substring(0, dexStartSquareBracket);
-            string attr = SHSubstring.Substring(part, dexStartSquareBracket + 1, dexEndSquareBracket - 1, null);
+            string attr = part.Substring(dexStartSquareBracket + 1, dexEndSquareBracket - 1);
             if (attr != "")
             {
                 if (attr[0] == '@')

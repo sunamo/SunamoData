@@ -1,6 +1,6 @@
-namespace SunamoData._sunamo;
+//namespace SunamoData._sunamo;
 
-internal class RandomHelper
-{
-    internal static Func<int, string> RandomString;
-}
+//public class RandomHelper
+//{
+//    public static Func<int, string> RandomString;
+//}

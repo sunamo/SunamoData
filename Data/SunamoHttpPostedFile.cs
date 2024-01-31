@@ -12,7 +12,7 @@ public class SunamoHttpPostedFile
         this.ContentType = ContentType;
 
         MemoryStream ms = new MemoryStream();
-        FS.CopyStream(InputStream, ms);
+        InputStream.CopyTo(ms);
 
         Bytes = ms.ToArray().ToList();
         this.FileName = FileName;

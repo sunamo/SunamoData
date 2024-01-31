@@ -13,23 +13,24 @@ public class FileInfoSerie : FileInfoLite
     public string FileNameComplet = null;
     public bool NeverRemove = false;
 
-    public static FileInfoSerie GetFIS(string file)
+    public static FileInfoSerie GetFIS(string file, Func<string, bool, SerieStyle, (string, bool)> GetNameWithoutSeriesNoOut)
     {
         FileInfo item2 = new FileInfo(file);
-        return GetFIS(item2);
+        return GetFIS(item2, GetNameWithoutSeriesNoOut);
     }
 
-    public static FileInfoSerie GetFIS(FileInfo item2)
+    public static FileInfoSerie GetFIS(FileInfo item2, Func<string, bool, SerieStyle, (string, bool)> GetNameWithoutSeriesNoOut)
     {
         FileInfoSerie fil = new FileInfoSerie();
         fil.Name = item2.Name;
         fil.Path = item2.FullName;
         fil.Size = item2.Length;
-        bool hasSerie = false;
-        fil.NameWithoutSeries = FS.GetNameWithoutSeries(fil.Name, false, out hasSerie, SerieStyle.Brackets);
-        fil.PathWithoutSerie = FS.GetNameWithoutSeries(fil.Name, true, out hasSerie, SerieStyle.Brackets);
-        fil.HasSerie = hasSerie;
-        fil.FileNameComplet = FS.GetFileName(item2.FullName);
+        var (name, hasSerieName) = GetNameWithoutSeriesNoOut(fil.Name, false, SerieStyle.Brackets);
+        var (path, hasSeriePath) = GetNameWithoutSeriesNoOut(fil.Name, false, SerieStyle.Brackets);
+        fil.NameWithoutSeries = name;
+        fil.PathWithoutSerie = path;
+        fil.HasSerie = hasSeriePath;
+        fil.FileNameComplet = System.IO.Path.GetFileName(item2.FullName);
         return fil;
     }
 }

@@ -12,8 +12,6 @@ global using SunamoData.Data;
 global using SunamoExceptions;
 global using SunamoEnums.Enums;
 global using System.IO;
-global using SunamoData.Enums;
 global using SunamoData._sunamo;
-global using SunamoArgs;
 global using System.Net.Http;
 global using SunamoTypeOfMessage;

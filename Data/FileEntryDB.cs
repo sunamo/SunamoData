@@ -26,6 +26,7 @@ public class FileInfoDB : FileInfoLite
 
     public override string ToString()
     {
-        return UH.Combine(false, new string[] { Path, Name });
+        return System.IO.Path.Combine(Path, Name);
+        //return UH.Combine(false, new string[] { Path, Name });
     }
 }

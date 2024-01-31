@@ -1,5 +1,4 @@
 namespace SunamoData.Data;
-using FromToUse = SunamoEnums.Enums.FromToUse;
 
 /// <summary>
 ///     Must have always entered both from and to
