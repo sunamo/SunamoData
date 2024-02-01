@@ -1,6 +1,8 @@
+namespace SunamoData._sunamo;
+
 //namespace SunamoData._sunamo;
 
-//public class UH
+//internal class UH
 //{
-//    public static Func<bool, string[], string> Combine;
+//    internal static Func<bool, string[], string> Combine;
 //}

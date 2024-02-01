@@ -17,13 +17,16 @@ public class SunamoPoint
 
     public void Parse(string input)
     {
-        var d = ParserTwoValues.ParseDouble(AllStringsSE.comma, input);
-        X = d[0];
-        Y = d[1];
+        var d = input.Split(',');
+        //ParserTwoValues.ParseDouble(AllStringsSE.comma, SHParts.RemoveAfterFirstFunc(input, char.IsLetter, new char[] { AllCharsSE.comma }));
+        X = double.Parse(d[0]);
+
+        Y = double.Parse(d[1]);
     }
 
     public override string ToString()
     {
-        return ParserTwoValues.ToString(AllStringsSE.comma, X.ToString(), Y.ToString());
+        //return ParserTwoValues.ToString(AllStringsSE.comma, X.ToString(), Y.ToString());
+        return X + "," + Y;
     }
 }

@@ -1,13 +1,15 @@
+namespace SunamoData._sunamo;
+
 //namespace SunamoData._sunamo;
 
-//public class FSND
+//internal class FSND
 //{
-//    public static Func<string, string> WithEndSlash;
-//    //public static Func<string, string> GetDirectoryName;
-//    //public static Func<string, string> GetExtension;
-//    //public static Func<string, object, string> RemoveAfterLast;
-//    //public static Func<string, string> GetFileName;
-//    //public static Action<Stream, Stream> CopyStream;
+//    internal static Func<string, string> WithEndSlash;
+//    //internal static Func<string, string> GetDirectoryName;
+//    //internal static Func<string, string> GetExtension;
+//    //internal static Func<string, object, string> RemoveAfterLast;
+//    //internal static Func<string, string> GetFileName;
+//    //internal static Action<Stream, Stream> CopyStream;
 
 //    //#region For easy copy - GetNameWithoutSeries
 //    ///// <summary>
@@ -15,14 +17,14 @@
 //    ///// A2 říká, zda se má vrátit plná cesta ke souboru A1, upraví se pouze samotný název souboru
 //    ///// Works for brackets, not dash
 //    ///// </summary>
-//    //public static string GetNameWithoutSeries(string p, bool path)
+//    //internal static string GetNameWithoutSeries(string p, bool path)
 //    //{
 //    //    int serie;
 //    //    bool hasSerie = false;
 //    //    return GetNameWithoutSeries(p, path, out hasSerie, SerieStyle.Brackets, out serie);
 //    //}
 
-//    //public static string GetNameWithoutSeries(string p, bool path, out bool hasSerie, SerieStyle serieStyle)
+//    //internal static string GetNameWithoutSeries(string p, bool path, out bool hasSerie, SerieStyle serieStyle)
 //    //{
 //    //    int serie;
 //    //    return GetNameWithoutSeries(p, path, out hasSerie, serieStyle, out serie);
@@ -39,7 +41,7 @@
 //    ///// <param name="p"></param>
 //    ///// <param name="a1IsWithPath"></param>
 //    ///// <param name="hasSerie"></param>
-//    //public static string GetNameWithoutSeries(string p, bool a1IsWithPath, out bool hasSerie, SerieStyle serieStyle, out int serie)
+//    //internal static string GetNameWithoutSeries(string p, bool a1IsWithPath, out bool hasSerie, SerieStyle serieStyle, out int serie)
 //    //{
 //    //    serie = -1;
 //    //    hasSerie = false;
@@ -141,7 +143,7 @@
 //    //    return g + ext;
 //    //}
 
-//    //public static string RemoveSerieUnderscore(string d)
+//    //internal static string RemoveSerieUnderscore(string d)
 //    //{
 //    //    int serie = 0;
 //    //    int pocetSerii = 0;

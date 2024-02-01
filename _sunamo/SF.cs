@@ -1,7 +1,9 @@
+namespace SunamoData._sunamo;
+
 //namespace SunamoData._sunamo;
 
-//public class SF
+//internal class SF
 //{
-//    public static Func<string, string, List<string>> GetAllElementsLine;
-//    public static char separatorString;
+//    internal static Func<string, string, List<string>> GetAllElementsLine;
+//    internal static char separatorString;
 //}

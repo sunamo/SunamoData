@@ -1,8 +1,10 @@
+namespace SunamoData._sunamo;
+
 //namespace SunamoData._sunamo;
 
-//public class DictionaryHelper
+//internal class DictionaryHelper
 //{
-//    public static Dictionary<T1, T2> GetDictionaryFromIList<T1, T2>(List<KeyValuePair<T1, T2>> enumerable, bool addRandomWhenKeyExists = false)
+//    internal static Dictionary<T1, T2> GetDictionaryFromIList<T1, T2>(List<KeyValuePair<T1, T2>> enumerable, bool addRandomWhenKeyExists = false)
 //    {
 //        Dictionary<T1, T2> d = new Dictionary<T1, T2>();
 //        foreach (var item in enumerable)
@@ -36,7 +38,7 @@
 //    /// <param name="sl"></param>
 //    /// <param name="key"></param>
 //    /// <param name="value"></param>
-//    public static void AddOrCreate<Key, Value, ColType>(IDictionary<Key, List<Value>> dict, Key key, Value value,
+//    internal static void AddOrCreate<Key, Value, ColType>(IDictionary<Key, List<Value>> dict, Key key, Value value,
 //        bool withoutDuplicitiesInValue = false, Dictionary<Key, List<string>> dictS = null)
 //    {
 //        var compWithString = false;
@@ -141,7 +143,7 @@
 //        }
 //    }
 
-//    public static void AddOrCreate<Key, Value>(IDictionary<Key, List<Value>> sl, Key key, Value value,
+//    internal static void AddOrCreate<Key, Value>(IDictionary<Key, List<Value>> sl, Key key, Value value,
 //        bool withoutDuplicitiesInValue = false, Dictionary<Key, List<string>> dictS = null)
 //    {
 //        AddOrCreate<Key, Value, object>(sl, key, value, withoutDuplicitiesInValue, dictS);

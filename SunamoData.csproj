@@ -3,18 +3,14 @@
     <TargetFramework>net8.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
-    <Version>24.1.24.1</Version>
+    <Version>24.2.1.2</Version>
     <Description>Shared packages across packages with instance data-holder classes</Description>
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
-    <PackageReference Include="SunamoEnums" Version="24.1.14.1" />
-    <PackageReference Include="SunamoFileSystemNoDeps" Version="24.1.23.3" />
-    <PackageReference Include="SunamoParsing" Version="24.1.23.1" />
-    <PackageReference Include="SunamoStringData" Version="24.1.23.1" />
-    <PackageReference Include="SunamoStringParts" Version="24.1.23.6" />
-    <PackageReference Include="SunamoTypeOfMessage" Version="24.1.14.1" />
-    <PackageReference Include="SunamoExceptions" Version="24.1.14.1" />
+    <PackageReference Include="SunamoEnums" Version="24.2.1.1" />
+    <PackageReference Include="SunamoTypeOfMessage" Version="24.2.1.1" />
+    <PackageReference Include="SunamoExceptions" Version="24.2.1.1" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Data\_majiDepsNaNěčemCoNemůžuTeďZkompilovat\" />

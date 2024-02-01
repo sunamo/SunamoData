@@ -1,6 +1,8 @@
+namespace SunamoData._sunamo;
+
 //namespace SunamoData._sunamo;
 
-//public class CA
+//internal class CA
 //{
-//    public static Func<List<string>, List<string>> ToLower;
+//    internal static Func<List<string>, List<string>> ToLower;
 //}

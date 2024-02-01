@@ -1,5 +1,7 @@
 namespace SunamoData.Data;
 
+
+
 public class SunamoSize //: IParser
 {
     public double Width { get; set; }
@@ -24,14 +26,16 @@ public class SunamoSize //: IParser
 
     public void Parse(string input)
     {
-        var d = ParserTwoValues.ParseDouble(AllStringsSE.comma, SHParts.RemoveAfterFirstFunc(input, char.IsLetter, new char[] { AllCharsSE.comma }));
-        Width = d[0];
+        var d = input.Split(',');
+        //ParserTwoValues.ParseDouble(AllStringsSE.comma, SHParts.RemoveAfterFirstFunc(input, char.IsLetter, new char[] { AllCharsSE.comma }));
+        Width = double.Parse(d[0]);
 
-        Height = d[1];
+        Height = double.Parse(d[1]);
     }
 
     public override string ToString()
     {
-        return ParserTwoValues.ToString(AllStringsSE.comma, Width.ToString(), Height.ToString());
+        //return ParserTwoValues.ToString(AllStringsSE.comma, Width.ToString(), Height.ToString());
+        return Width + "," + Height;
     }
 }

@@ -1,8 +1,10 @@
+namespace SunamoData._sunamo;
+
 //namespace SunamoData._sunamo;
 
-//public class ParserTwoValues
+//internal class ParserTwoValues
 //{
-//    public static Func<string, string, List<double>> ParseDouble;
-//    public static Func<string, string, List<string>> ParseString;
-//    public static Func<string, string, string, string> ToString;
+//    internal static Func<string, string, List<double>> ParseDouble;
+//    internal static Func<string, string, List<string>> ParseString;
+//    internal static Func<string, string, string, string> ToString;
 //}

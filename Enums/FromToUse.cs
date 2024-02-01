@@ -1,4 +1,6 @@
-﻿//namespace SunamoData.Enums;
+namespace SunamoData.Enums;
+
+//namespace SunamoData.Enums;
 
 // nevím kde by to mělo být. tak jsem to definitivně zakomentoval zde
 
