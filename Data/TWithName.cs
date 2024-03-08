@@ -1,6 +1,6 @@
 namespace SunamoData.Data;
 
-public class TWithName<T>
+public class TWithNameT<T>
 {
     /// <summary>
     ///     Just first 5. letters
