@@ -20,12 +20,3 @@ public class TWithSize<T>
     //    Debug.WriteLine(first);
     //}
 }
-
-
-//public record Rekord(string first, string last);
-
-//record Rekord
-//{
-//    public string Firstname { get; init; }
-//    public string Lastname { get; init; }
-//}
