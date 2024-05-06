@@ -26,6 +26,6 @@ public class AB
 
     public override string ToString()
     {
-        return A + AllStringsSE.cs2 + B;
+        return A + AllStrings.cs2 + B;
     }
 }

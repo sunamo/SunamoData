@@ -12,7 +12,7 @@ public class SerializeContentArgs
             return separatorString[0];
         }
     }
-    public string separatorString = AllStringsSE.verbar;
+    public string separatorString = AllStrings.verbar;
 
     public int keyCodeSeparator
     {

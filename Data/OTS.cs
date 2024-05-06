@@ -15,6 +15,6 @@ public class OTS
 
     public override string ToString()
     {
-        return A.ToString() + AllStringsSE.space + B.ToString();
+        return A.ToString() + AllStrings.space + B.ToString();
     }
 }

@@ -55,7 +55,7 @@ public class FromToT<T> : FromToTSH<T>, IParser where T : struct
     public void Parse(string input)
     {
         List<string> v = null;
-        if (input.Contains(AllStringsSE.dash))
+        if (input.Contains(AllStrings.dash))
         {
             v = input.Split(AllChars.dash).ToList(); //SHSplit.SplitChar(input, new Char[] { AllCharsSE.dash });
         }
@@ -97,9 +97,9 @@ public class FromToT<T> : FromToTSH<T>, IParser where T : struct
     private int ReturnSecondsFromTimeFormat(string v)
     {
         int result = 0;
-        if (v.Contains(AllStringsSE.colon))
+        if (v.Contains(AllStrings.colon))
         {
-            var parts = v.Split(AllChars.colon).ToList().ConvertAll(d => int.Parse(d)); //SHSplit.SplitToIntList(v, new String[] { AllStringsSE.colon });
+            var parts = v.Split(AllChars.colon).ToList().ConvertAll(d => int.Parse(d)); //SHSplit.SplitToIntList(v, new String[] { AllStrings.colon });
             result += parts[0] * (int)DTConstants.secondsInHour;
             if (parts.Count > 1)
             {
