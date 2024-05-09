@@ -1,4 +1,14 @@
-namespace SunamoData.Data;
+namespace
+#if SunamoCl
+SunamoCl
+#elif SunamoString
+SunamoString
+#elif SunamoText
+SunamoText
+#else SunamoDataData
+SunamoDataData
+#endif
+;
 
 /// <summary>
 /// Alternatives: FormatOfString - allow as many as is chars in every match

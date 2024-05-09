@@ -1,4 +1,10 @@
-namespace SunamoData.Data;
+namespace
+#if SunamoUriWebServices
+SunamoUriWebServices
+#else SunamoDataData
+SunamoDataData
+#endif
+;
 
 public class AzureBuildUriArgs
 {

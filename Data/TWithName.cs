@@ -1,4 +1,10 @@
-namespace SunamoData.Data;
+namespace
+#if SunamoDevCode
+SunamoDevCode
+#else SunamoDataData
+SunamoDataData
+#endif
+;
 
 public class TWithName
 {

@@ -1,5 +1,11 @@
 
-namespace SunamoData.Data;
+namespace
+#if SunamoFileSystem
+SunamoFileSystem
+#else SunamoDataData
+SunamoDataData
+#endif
+;
 public class ReplaceInAllFilesArgsBase
 {
     public List<string> files;

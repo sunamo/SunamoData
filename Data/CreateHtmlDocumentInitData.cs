@@ -1,4 +1,10 @@
-namespace SunamoData.Data;
+namespace
+#if SunamoHtml
+SunamoHtml
+#else SunamoDataData
+SunamoDataData
+#endif
+;
 
 public class CreateHtmlDocumentInitData
 {

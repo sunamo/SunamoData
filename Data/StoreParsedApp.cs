@@ -1,4 +1,10 @@
-namespace SunamoData.Data;
+namespace
+#if SunamoGoogleSheets
+SunamoGoogleSheets
+#else SunamoDataData
+SunamoDataData
+#endif
+;
 
 public class StoreParsedApp
 {

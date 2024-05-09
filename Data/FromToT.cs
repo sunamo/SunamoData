@@ -1,5 +1,13 @@
 
-namespace SunamoData.Data;
+namespace
+#if SunamoDateTime
+SunamoDateTime
+#elif SunamoGoogleSheets
+SunamoGoogleSheets
+#else SunamoDataData
+SunamoDataData
+#endif
+;
 
 using SunamoData.Data;
 using SunamoInterfaces.Interfaces;

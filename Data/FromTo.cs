@@ -1,4 +1,10 @@
-namespace SunamoData.Data;
+namespace
+#if SunamoStringReplace
+SunamoStringReplace
+#else SunamoDataData
+SunamoDataData
+#endif
+;
 
 /// <summary>
 ///     Must have always entered both from and to

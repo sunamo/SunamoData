@@ -1,4 +1,10 @@
-namespace SunamoData.Data;
+namespace
+#if SunamoXlfKeys
+SunamoXlfKeys
+#else SunamoDataData
+SunamoDataData
+#endif
+;
 
 public class Speed
 {

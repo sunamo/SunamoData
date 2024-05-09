@@ -1,4 +1,16 @@
-namespace SunamoData.Data;
+namespace
+#if SunamoFileIO
+SunamoFileIO
+#elif SunamoFileSystem
+SunamoFileSystem
+#elif SunamoPlatformUwpInterop
+SunamoPlatformUwpInterop
+#elif SunamoShared
+SunamoShared
+#else SunamoDataData
+SunamoDataData
+#endif
+;
 
 //using System;
 //using System.Collections.Generic;

@@ -1,4 +1,12 @@
-namespace SunamoData.Data;
+namespace
+#if SunamoFluentFtp
+SunamoFluentFtp
+#elif SunamoFtp
+SunamoFtp
+#else SunamoDataData
+SunamoDataData
+#endif
+;
 
 public class DirectoriesToDelete
 {

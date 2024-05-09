@@ -1,4 +1,10 @@
-namespace SunamoData.Data;
+namespace
+#if SunamoShared
+SunamoShared
+#else SunamoDataData
+SunamoDataData
+#endif
+;
 
 public class UploadFile
 {

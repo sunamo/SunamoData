@@ -1,4 +1,10 @@
-namespace SunamoData.Data;
+namespace
+#if SunamoTextOutputGenerator
+SunamoTextOutputGenerator
+#else SunamoDataData
+SunamoDataData
+#endif
+;
 
 public class CompareCollectionsResult<T>
 {

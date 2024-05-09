@@ -1,4 +1,10 @@
-namespace SunamoData.Data;
+namespace
+#if SunamoString
+SunamoString
+#else SunamoDataData
+SunamoDataData
+#endif
+;
 
 /// <summary>
 /// Udává jak musí být vstupní text zformátovaný

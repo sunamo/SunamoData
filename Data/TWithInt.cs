@@ -1,4 +1,12 @@
-namespace SunamoData.Data;
+namespace
+#if SunamoCompare
+SunamoCompare
+#elif SunamoFileSystem
+SunamoFileSystem
+#else SunamoDataData
+SunamoDataData
+#endif
+;
 
 public class TWithInt<T>
 {

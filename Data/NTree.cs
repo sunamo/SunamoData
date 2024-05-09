@@ -1,4 +1,12 @@
-namespace SunamoData.Data;
+namespace
+#if SunamoDictionary
+SunamoDictionary
+#elif SunamoHtml
+SunamoHtml
+#else SunamoDataData
+SunamoDataData
+#endif
+;
 
 public delegate void TreeVisitor<T>(T nodeData);
 

@@ -1,4 +1,12 @@
-namespace SunamoData.Data;
+namespace
+#if SunamoString
+SunamoString
+#elif SunamoStringShared
+SunamoStringShared
+#else SunamoDataData
+SunamoDataData
+#endif
+;
 
 public class FromToList
 {
