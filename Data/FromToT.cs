@@ -1,5 +1,5 @@
 
-namespace SunamoDateTime.Data;
+namespace SunamoData.Data;
 
 using SunamoData.Data;
 using SunamoInterfaces.Interfaces;

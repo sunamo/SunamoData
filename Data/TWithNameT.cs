@@ -1,3 +1,5 @@
+
+namespace SunamoData.Data;
 public class TWithNameT<T>
 {
     /// <summary>
