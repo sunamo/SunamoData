@@ -3,7 +3,7 @@ namespace
 SunamoFluentFtp
 #elif SunamoFtp
 SunamoFtp
-#else SunamoDataData
+#else
 SunamoDataData
 #endif
 ;

@@ -4,7 +4,7 @@ namespace
 SunamoDateTime
 #elif SunamoGoogleSheets
 SunamoGoogleSheets
-#else SunamoDataData
+#else
 SunamoDataData
 #endif
 ;

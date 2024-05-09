@@ -3,7 +3,7 @@ namespace
 SunamoCompare
 #elif SunamoFileSystem
 SunamoFileSystem
-#else SunamoDataData
+#else
 SunamoDataData
 #endif
 ;

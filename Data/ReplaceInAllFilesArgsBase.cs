@@ -2,7 +2,7 @@
 namespace
 #if SunamoFileSystem
 SunamoFileSystem
-#else SunamoDataData
+#else
 SunamoDataData
 #endif
 ;

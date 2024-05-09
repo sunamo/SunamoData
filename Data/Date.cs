@@ -9,7 +9,7 @@ SunamoFubuCore
 SunamoShared
 #elif SunamoXlfKeys
 SunamoXlfKeys
-#else SunamoDataData
+#else
 SunamoDataData
 #endif
 ;

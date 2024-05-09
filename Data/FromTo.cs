@@ -1,7 +1,7 @@
 namespace
 #if SunamoStringReplace
 SunamoStringReplace
-#else SunamoDataData
+#else
 SunamoDataData
 #endif
 ;

@@ -1,7 +1,7 @@
 namespace
 #if SunamoHtml
 SunamoHtml
-#else SunamoDataData
+#else
 SunamoDataData
 #endif
 ;

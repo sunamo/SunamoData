@@ -5,7 +5,7 @@ SunamoCl
 SunamoString
 #elif SunamoText
 SunamoText
-#else SunamoDataData
+#else
 SunamoDataData
 #endif
 ;

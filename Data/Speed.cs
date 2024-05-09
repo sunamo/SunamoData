@@ -1,7 +1,7 @@
 namespace
 #if SunamoXlfKeys
 SunamoXlfKeys
-#else SunamoDataData
+#else
 SunamoDataData
 #endif
 ;
