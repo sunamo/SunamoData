@@ -10,7 +10,7 @@ SunamoShared
 #elif SunamoXlfKeys
 SunamoXlfKeys
 #else
-SunamoDataData
+SunamoData
 #endif
 ;
 

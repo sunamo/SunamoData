@@ -2,7 +2,7 @@ namespace
 #if SunamoCl
     SunamoCl
 #else
-    SunamoData.Data
+SunamoData
 #endif
 ;
 

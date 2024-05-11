@@ -2,7 +2,7 @@ namespace
 #if SunamoGoogleSheets
 SunamoGoogleSheets
 #else
-SunamoDataData
+SunamoData
 #endif
 ;
 

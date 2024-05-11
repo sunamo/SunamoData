@@ -1,4 +1,4 @@
-namespace SunamoData.Data;
+namespace SunamoData;
 
 public class ABC : List<AB>//, IList<AB>
 {

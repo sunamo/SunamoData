@@ -2,7 +2,7 @@ namespace
 #if SunamoUriWebServices
 SunamoUriWebServices
 #else
-SunamoDataData
+SunamoData
 #endif
 ;
 

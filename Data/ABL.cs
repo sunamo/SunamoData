@@ -1,4 +1,6 @@
 
+namespace SunamoData;
+
 namespace
 #if SunamoCollections
 SunamoCollections

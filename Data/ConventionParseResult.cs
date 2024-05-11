@@ -1,4 +1,4 @@
-namespace SunamoData.Data;
+namespace SunamoData;
 
 public class ConventionParseResult<T, U, Z>
 {

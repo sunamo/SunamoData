@@ -1,4 +1,4 @@
-namespace SunamoData._sunamo;
+namespace SunamoData;
 
 internal class SHSH
 {

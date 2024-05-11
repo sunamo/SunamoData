@@ -8,7 +8,7 @@ SunamoPlatformUwpInterop
 #elif SunamoShared
 SunamoShared
 #else
-SunamoDataData
+SunamoData
 #endif
 ;
 

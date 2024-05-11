@@ -1,4 +1,4 @@
-namespace SunamoData.Data;
+namespace SunamoData;
 
 public class TUList<T, U> : List<TU<T, U>>
 {

@@ -8,7 +8,7 @@ SunamoCollections
 #elif SunamoCollectionsGenericShared
     SunamoCollectionsGenericShared
 #else
-SunamoDataData
+SunamoData
 #endif
 ;
 

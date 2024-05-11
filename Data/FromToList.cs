@@ -4,7 +4,7 @@ SunamoString
 #elif SunamoStringShared
 SunamoStringShared
 #else
-SunamoDataData
+SunamoData
 #endif
 ;
 

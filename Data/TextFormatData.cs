@@ -8,7 +8,7 @@ SunamoString
 #elif SunamoText
 SunamoText
 #else
-SunamoDataData
+SunamoData
 #endif
 ;
 

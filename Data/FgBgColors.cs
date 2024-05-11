@@ -1,4 +1,4 @@
-namespace SunamoData.Data;
+namespace SunamoData;
 
 /// <summary>
 /// Lze použít na hex vyjádření nebo třeba na barvy bg- a fg- v Metro UI CSS FW

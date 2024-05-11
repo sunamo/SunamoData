@@ -1,5 +1,5 @@
 
-namespace SunamoData.Data;
+namespace SunamoData;
 public class FromToWord
 {
     public int from = 0;

@@ -3,7 +3,7 @@ namespace
 #if SunamoFileSystem
 SunamoFileSystem
 #else
-SunamoDataData
+SunamoData
 #endif
 ;
 public class ReplaceInAllFilesArgsBase

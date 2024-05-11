@@ -4,7 +4,7 @@ SunamoFluentFtp
 #elif SunamoFtp
 SunamoFtp
 #else
-SunamoDataData
+SunamoData
 #endif
 ;
 

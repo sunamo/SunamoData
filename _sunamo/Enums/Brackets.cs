@@ -1,4 +1,4 @@
-namespace SunamoData._sunamo.Enums;
+namespace SunamoData;
 internal enum Brackets
 {
     Curly,

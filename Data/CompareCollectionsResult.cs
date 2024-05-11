@@ -2,7 +2,7 @@ namespace
 #if SunamoTextOutputGenerator
 SunamoTextOutputGenerator
 #else
-SunamoDataData
+SunamoData
 #endif
 ;
 

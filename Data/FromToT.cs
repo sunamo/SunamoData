@@ -5,7 +5,7 @@ SunamoDateTime
 #elif SunamoGoogleSheets
 SunamoGoogleSheets
 #else
-SunamoDataData
+SunamoData
 #endif
 ;
 

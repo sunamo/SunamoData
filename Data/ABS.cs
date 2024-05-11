@@ -1,4 +1,4 @@
-namespace SunamoData.Data;
+namespace SunamoData;
 
 /// <summary>
 /// Implicitly are strings.Empty to avoid cheching data class for null

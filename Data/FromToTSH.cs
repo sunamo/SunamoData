@@ -7,7 +7,7 @@ SunamoCl
 #elif SunamoCollections
 SunamoCollections
 #else
-    SunamoData.Data
+SunamoData
 #endif
 ;
 

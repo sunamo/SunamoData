@@ -2,7 +2,7 @@ namespace
 #if SunamoDevCode
 SunamoDevCode
 #else
-SunamoDataData
+SunamoData
 #endif
 ;
 using SunamoEnums.Enums;

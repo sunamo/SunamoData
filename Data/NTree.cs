@@ -4,7 +4,7 @@ SunamoDictionary
 #elif SunamoHtml
 SunamoHtml
 #else
-SunamoDataData
+SunamoData
 #endif
 ;
 

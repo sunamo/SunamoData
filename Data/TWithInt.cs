@@ -4,7 +4,7 @@ SunamoCompare
 #elif SunamoFileSystem
 SunamoFileSystem
 #else
-SunamoDataData
+SunamoData
 #endif
 ;
 
