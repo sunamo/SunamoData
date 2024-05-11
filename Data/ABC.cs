@@ -122,7 +122,7 @@ public class ABC : List<AB>//, IList<AB>
     public List<string> OnlyAs()
     {
         List<string> o = new List<string>(this.Count);
-        CASE.InitFillWith(o, this.Count);
+        CASunamoExceptions.InitFillWith(o, this.Count);
         for (int i = 0; i < this.Count; i++)
         {
             o[i] = this[i].A;

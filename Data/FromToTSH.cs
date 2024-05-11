@@ -4,6 +4,8 @@ namespace
 SunamoCl
 #elif SunamoCollectionsGenericShared
     SunamoCollectionsGenericShared
+#elif SunamoCollections
+SunamoCollections
 #else
     SunamoData.Data
 #endif

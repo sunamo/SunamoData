@@ -3,6 +3,8 @@ namespace
 SunamoStringReplace
 #elif SunamoCl
     SunamoCl
+#elif SunamoCollections
+SunamoCollections
 #elif SunamoCollectionsGenericShared
     SunamoCollectionsGenericShared
 #else

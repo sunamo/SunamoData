@@ -1,4 +1,11 @@
-namespace SunamoData.Data;
+
+namespace
+#if SunamoCollections
+SunamoCollections
+#else
+    SunamoData.Data
+#endif
+;
 
 public class ABL<T, U>
 {

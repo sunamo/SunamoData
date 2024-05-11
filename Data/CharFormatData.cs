@@ -3,6 +3,8 @@
 namespace
 #if SunamoString
 SunamoString
+#elif SunamoCl
+SunamoCl
 #else
 SunamoDataData
 #endif
