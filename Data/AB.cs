@@ -1,4 +1,10 @@
-namespace SunamoData.Data;
+namespace
+#if SunamoCl
+    SunamoCl
+#else
+    SunamoData.Data
+#endif
+;
 
 public class AB
 {

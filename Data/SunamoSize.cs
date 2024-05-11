@@ -27,7 +27,7 @@ public class SunamoSize //: IParser
     public void Parse(string input)
     {
         var d = input.Split(',');
-        //ParserTwoValues.ParseDouble(AllStrings.comma, SHParts.RemoveAfterFirstFunc(input, char.IsLetter, new char[] { AllCharsSE.comma }));
+        //ParserTwoValues.ParseDouble(AllStrings.comma, SHParts.RemoveAfterFirstFunc(input, char.IsLetter, new char[] { AllChars.comma }));
         Width = double.Parse(d[0]);
 
         Height = double.Parse(d[1]);

@@ -1,3 +1,5 @@
+using SunamoCl;
+
 namespace
 #if SunamoString
 SunamoString
@@ -23,8 +25,8 @@ public class CharFormatData
 
     public static class Templates
     {
-        public static CharFormatData dash = Get(null, new FromTo(1, 1), AllCharsSE.dash);
-        public static CharFormatData notNumber = Get(null, new FromTo(1, 1), AllCharsSE.notNumber);
+        public static CharFormatData dash = Get(null, new FromTo(1, 1), AllChars.dash);
+        public static CharFormatData notNumber = Get(null, new FromTo(1, 1), AllChars.notNumber);
 
         /// <summary>
         /// When doesn't contains fixed, is from 0 to number
@@ -58,7 +60,7 @@ public class CharFormatData
     {
         CharFormatData data = new CharFormatData();
         data.fromTo = requiredLength;
-        data.mustBe = AllCharsSE.numericChars.ToArray();
+        data.mustBe = AllChars.numericChars.ToArray();
         return data;
     }
 

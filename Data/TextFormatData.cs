@@ -1,3 +1,5 @@
+using SunamoDataData;
+
 namespace
 #if SunamoCl
 SunamoCl

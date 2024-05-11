@@ -1,8 +1,13 @@
-namespace SunamoData.Data;
 
-//using FromToUse = SunamoEnums.Enums.FromToUse;
-
-//namespace SunamoData.Data;
+namespace
+#if SunamoCl
+SunamoCl
+#elif SunamoCollectionsGenericShared
+    SunamoCollectionsGenericShared
+#else
+    SunamoData.Data
+#endif
+;
 
 
 public class FromToTSH<T>

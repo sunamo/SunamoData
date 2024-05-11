@@ -18,7 +18,7 @@ public class SunamoPoint
     public void Parse(string input)
     {
         var d = input.Split(',');
-        //ParserTwoValues.ParseDouble(AllStrings.comma, SHParts.RemoveAfterFirstFunc(input, char.IsLetter, new char[] { AllCharsSE.comma }));
+        //ParserTwoValues.ParseDouble(AllStrings.comma, SHParts.RemoveAfterFirstFunc(input, char.IsLetter, new char[] { AllChars.comma }));
         X = double.Parse(d[0]);
 
         Y = double.Parse(d[1]);

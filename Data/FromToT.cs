@@ -65,7 +65,7 @@ public class FromToT<T> : FromToTSH<T>, IParser where T : struct
         List<string> v = null;
         if (input.Contains(AllStrings.dash))
         {
-            v = input.Split(AllChars.dash).ToList(); //SHSplit.SplitChar(input, new Char[] { AllCharsSE.dash });
+            v = input.Split(AllChars.dash).ToList(); //SHSplit.SplitChar(input, new Char[] { AllChars.dash });
         }
         else
         {

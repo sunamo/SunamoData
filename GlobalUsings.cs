@@ -15,3 +15,6 @@ global using System.Data;
 global using System.Net.Http;
 global using SunamoTypeOfMessage;
 global using System.Collections.Immutable;
+global using System.Collections.Generic;
+global using System.Collections;
+
