@@ -10,7 +10,7 @@ global using System.Collections;
 global using System.IO;
 global using System.Threading.Tasks;
 
-global using SunamoData.Data;
+
 global using System.Data;
 global using System.Net.Http;
 
