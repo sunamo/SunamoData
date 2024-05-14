@@ -2,11 +2,15 @@ namespace
 #if SunamoStringReplace
 SunamoStringReplace
 #elif SunamoCl
-    SunamoCl
+SunamoCl
 #elif SunamoCollections
 SunamoCollections
 #elif SunamoCollectionsGenericShared
-    SunamoCollectionsGenericShared
+SunamoCollectionsGenericShared
+#elif SunamoCSharp
+SunamoCSharp
+#elif SunamoString
+SunamoString
 #else
 SunamoData
 #endif

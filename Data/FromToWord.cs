@@ -1,5 +1,13 @@
 
-namespace SunamoData;
+namespace
+#if SunamoHtml
+SunamoHtml
+#elif SunamoString
+SunamoString
+#else
+SunamoData
+#endif
+;
 public class FromToWord
 {
     public int from = 0;

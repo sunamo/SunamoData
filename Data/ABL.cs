@@ -3,8 +3,10 @@
 namespace
 #if SunamoCollections
 SunamoCollections
+#elif SunamoData
+SunamoData
 #else
-    SunamoData.Data
+SunamoData.Data
 #endif
 ;
 

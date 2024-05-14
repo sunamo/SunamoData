@@ -1,6 +1,6 @@
 namespace
 #if SunamoCl
-    SunamoCl
+SunamoCl
 #else
 SunamoData
 #endif

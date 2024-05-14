@@ -1,4 +1,10 @@
-namespace SunamoData;
+namespace
+#if SunamoNumbers
+SunamoNumbers
+#else
+SunamoData
+#endif
+;
 
 public class MedianAverage<T>
 {

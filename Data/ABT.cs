@@ -1,4 +1,10 @@
-namespace SunamoData;
+namespace
+#if SunamoConverters
+SunamoConverters
+#else
+SunamoData
+#endif
+;
 
 public class ABT<Key, Value>
 {

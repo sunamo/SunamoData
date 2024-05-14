@@ -7,6 +7,8 @@ SunamoFileSystem
 SunamoPlatformUwpInterop
 #elif SunamoShared
 SunamoShared
+#elif SunamoLang
+SunamoLang
 #else
 SunamoData
 #endif

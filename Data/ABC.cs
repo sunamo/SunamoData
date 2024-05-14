@@ -1,4 +1,10 @@
-namespace SunamoData;
+namespace
+#if SunamoString
+SunamoString
+#else
+SunamoData
+#endif
+;
 
 public class ABC : List<AB>//, IList<AB>
 {

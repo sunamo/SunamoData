@@ -3,6 +3,8 @@ namespace
 SunamoString
 #elif SunamoStringShared
 SunamoStringShared
+#elif SunamoCSharp
+SunamoCSharp
 #else
 SunamoData
 #endif

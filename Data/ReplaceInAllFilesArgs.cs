@@ -1,4 +1,10 @@
-namespace SunamoData;
+namespace
+#if SunamoFileSystem
+SunamoFileSystem
+#else
+SunamoData
+#endif
+;
 
 /// <summary>
 /// Is passed into ReplaceInAllFilesWorker

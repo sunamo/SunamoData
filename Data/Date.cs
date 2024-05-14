@@ -9,6 +9,12 @@ SunamoFubuCore
 SunamoShared
 #elif SunamoXlfKeys
 SunamoXlfKeys
+#elif SunamoValues
+SunamoValues
+#elif SunamoLang
+SunamoLang
+#elif SunamoEnums
+SunamoEnums
 #else
 SunamoData
 #endif

@@ -1,4 +1,10 @@
-namespace SunamoData;
+namespace
+#if SunamoSerializer
+SunamoSerializer
+#else
+SunamoData
+#endif
+;
 
 public class SerializeContentArgs
 {

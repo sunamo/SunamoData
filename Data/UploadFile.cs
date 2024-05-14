@@ -1,6 +1,14 @@
 namespace
 #if SunamoShared
 SunamoShared
+#elif SunamoFluentFtp
+SunamoFluentFtp
+#elif SunamoFtp
+SunamoFtp
+#elif SunamoFtp
+SunamoFtp
+#elif SunamoFtp
+SunamoFtp
 #else
 SunamoData
 #endif

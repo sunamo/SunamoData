@@ -3,7 +3,7 @@ namespace
 #if SunamoCl
 SunamoCl
 #elif SunamoCollectionsGenericShared
-    SunamoCollectionsGenericShared
+SunamoCollectionsGenericShared
 #elif SunamoCollections
 SunamoCollections
 #else
