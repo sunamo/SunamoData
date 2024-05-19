@@ -9,9 +9,7 @@ SunamoDevCode
 SunamoData
 #endif
 ;
-
 public delegate void TreeVisitor<T>(T nodeData);
-
 /// <summary>
 /// Another big popular tree is on https://www.codeproject.com/Articles/12592/Generic-Tree-T-in-C
 /// </summary>
@@ -20,20 +18,17 @@ public class NTree<T>
 {
     public T data;
     public LinkedList<NTree<T>> children;
-
     public NTree(T data)
     {
         this.data = data;
         children = new LinkedList<NTree<T>>();
     }
-
     public NTree<T> AddChild(T data)
     {
         var child = new NTree<T>(data);
         children.AddFirst(child);
         return child;
     }
-
     public NTree<T> GetChild(int i)
     {
         foreach (NTree<T> n in children)
@@ -41,7 +36,6 @@ public class NTree<T>
                 return n;
         return null;
     }
-
     public void Traverse(NTree<T> node, TreeVisitor<T> visitor)
     {
         visitor(node.data);
