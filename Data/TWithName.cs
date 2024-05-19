@@ -8,8 +8,8 @@ SunamoData
 
 public class TWithName
 {
-    public static TWithName<object> Get(string nameCb)
+    public static TWithNameT<object> Get(string nameCb)
     {
-        return new TWithName<object> { name = nameCb };
+        return new TWithNameT<object> { name = nameCb };
     }
 }

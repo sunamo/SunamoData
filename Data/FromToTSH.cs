@@ -2,10 +2,18 @@
 namespace
 #if SunamoCl
 SunamoCl
+#elif SunamoCollectionsGeneric
+    SunamoCollectionsGeneric
 #elif SunamoCollectionsGenericShared
 SunamoCollectionsGenericShared
 #elif SunamoCollections
 SunamoCollections
+#elif SunamoDevCode
+SunamoDevCode
+#elif SunamoDateTime
+SunamoDateTime
+#elif SunamoDevCode
+SunamoDevCode
 #else
 SunamoData
 #endif

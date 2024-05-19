@@ -3,6 +3,8 @@ namespace
 SunamoDictionary
 #elif SunamoHtml
 SunamoHtml
+#elif SunamoDevCode
+SunamoDevCode
 #else
 SunamoData
 #endif

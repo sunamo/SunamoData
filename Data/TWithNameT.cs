@@ -1,5 +1,11 @@
 
-namespace SunamoData;
+namespace
+#if SunamoDevCode
+SunamoDevCode
+#else
+SunamoData
+#endif
+;
 public class TWithNameT<T>
 {
     /// <summary>
@@ -9,11 +15,11 @@ public class TWithNameT<T>
 
     public T t;
 
-    public TWithName()
+    public TWithNameT()
     {
     }
 
-    public TWithName(string name, T t)
+    public TWithNameT(string name, T t)
     {
         this.name = name;
         this.t = t;
@@ -25,8 +31,8 @@ public class TWithNameT<T>
         return name;
     }
 
-    public static TWithName<T> Get(string nameCb)
+    public static TWithNameT<T> Get(string nameCb)
     {
-        return new TWithName<T> { name = nameCb };
+        return new TWithNameT<T> { name = nameCb };
     }
 }

@@ -7,10 +7,18 @@ SunamoCl
 SunamoCollections
 #elif SunamoCollectionsGenericShared
 SunamoCollectionsGenericShared
-#elif SunamoCSharp
-SunamoCSharp
+#elif SunamoDevCode
+SunamoDevCode
 #elif SunamoString
 SunamoString
+#elif SunamoConverters
+SunamoConverters
+#elif SunamoCollectionsGeneric
+SunamoCollectionsGeneric
+#elif SunamoDateTime
+SunamoDateTime
+#elif SunamoDevCode
+SunamoDevCode
 #else
 SunamoData
 #endif
