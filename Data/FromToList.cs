@@ -11,11 +11,9 @@ SunamoDevCode
 SunamoData
 #endif
 ;
-
 public class FromToList
 {
     public List<FromTo> c = new();
-
     public bool IsInRange(int i)
     {
         foreach (var item in c)

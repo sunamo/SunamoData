@@ -1,5 +1,3 @@
-
-
 namespace
 #if SunamoCollections
 SunamoCollections
@@ -9,7 +7,6 @@ SunamoData
 SunamoData
 #endif
 ;
-
 public class ABL<T, U>
 {
     public List<T> a;

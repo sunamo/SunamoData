@@ -7,7 +7,6 @@ SunamoFtp
 SunamoData
 #endif
 ;
-
 public class DirectoriesToDelete
 {
     public int hloubka = 0;

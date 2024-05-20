@@ -19,7 +19,6 @@ SunamoEnums
 SunamoData
 #endif
 ;
-
 public class Date
 {
     public int Day;

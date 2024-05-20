@@ -5,7 +5,6 @@ SunamoDevCode
 SunamoData
 #endif
 ;
-
 public class FileInfoLite
 {
     /// <summary>
@@ -16,7 +15,6 @@ public class FileInfoLite
     /// Název souboru bez cesty s příponou a sériemi
     /// </summary>
     public string Name = null;
-
     public string FileName
     {
         get
@@ -24,9 +22,7 @@ public class FileInfoLite
             return Name;
         }
     }
-
     public long Size = 0;
-
     public long Length
     {
         get
@@ -34,21 +30,16 @@ public class FileInfoLite
             return Size;
         }
     }
-
     public string Directory = null;
-
     public FileInfoLite()
     {
-
     }
-
     public FileInfoLite(string Directory, string FileName, long Length)
     {
         this.Directory = Directory;
         Name = FileName;
         Size = Length;
     }
-
     public static FileInfoLite GetFIL(FileInfo item2)
     {
         FileInfoLite fil = new FileInfoLite();
@@ -58,7 +49,6 @@ public class FileInfoLite
         fil.Size = item2.Length;
         return fil;
     }
-
     public static FileInfoLite GetFIL(string file)
     {
         FileInfo item2 = new FileInfo(file);
