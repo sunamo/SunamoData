@@ -1,9 +1,8 @@
-
 namespace
 #if SunamoCl
 SunamoCl
 #elif SunamoCollectionsGeneric
-    SunamoCollectionsGeneric
+SunamoCollectionsGeneric
 #elif SunamoCollectionsGenericShared
 SunamoCollectionsGenericShared
 #elif SunamoCollections
@@ -14,28 +13,28 @@ SunamoDevCode
 SunamoDateTime
 #elif SunamoDevCode
 SunamoDevCode
+#elif SunamoGoogleSheets
+SunamoGoogleSheets
+#elif SunamoStringReplace
+SunamoStringReplace
+#elif SunamoString
+SunamoString
 #else
 SunamoData
 #endif
 ;
-
-
 public class FromToTSH<T>
 {
-    public static Type type = typeof(FromTo);
+    
     public bool empty;
-
     protected long fromL;
-
     public FromToUse ftUse = FromToUse.DateTime;
     protected long toL;
-
     public FromToTSH()
     {
         var t = typeof(T);
         if (t == Types.tInt) ftUse = FromToUse.None;
     }
-
     /// <summary>
     ///     Use Empty contstant outside of class
     /// </summary>
@@ -44,7 +43,6 @@ public class FromToTSH<T>
     {
         this.empty = empty;
     }
-
     /// <summary>
     ///     A3 true = DateTime
     ///     A3 False = None
@@ -58,20 +56,16 @@ public class FromToTSH<T>
         this.to = to;
         this.ftUse = ftUse;
     }
-
     public T from
     {
         get => (T)(dynamic)fromL;
         set => fromL = (long)(dynamic)value;
     }
-
     public T to
     {
         get => (T)(dynamic)toL;
         set => toL = (long)(dynamic)value;
     }
-
-
     public long FromL => fromL;
     public long ToL => toL;
 }

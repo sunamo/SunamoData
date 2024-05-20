@@ -5,7 +5,6 @@ SunamoShared
 SunamoData
 #endif
 ;
-
 public class CheckBoxData<T>
 {
     /// <summary>

@@ -23,7 +23,6 @@ SunamoDevCode
 SunamoData
 #endif
 ;
-
 /// <summary>
 ///     Must have always entered both from and to
 ///     None of event could have unlimited time!
@@ -31,11 +30,9 @@ SunamoData
 public class FromTo : FromToTSH<long>
 {
     public static FromTo Empty = new(true);
-
     public FromTo()
     {
     }
-
     /// <summary>
     ///     Use Empty contstant outside of class
     /// </summary>
@@ -44,7 +41,6 @@ public class FromTo : FromToTSH<long>
     {
         this.empty = empty;
     }
-
     /// <summary>
     ///     A3 true = DateTime
     ///     A3 False = None

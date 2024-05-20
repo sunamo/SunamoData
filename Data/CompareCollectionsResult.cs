@@ -5,7 +5,6 @@ SunamoTextOutputGenerator
 SunamoData
 #endif
 ;
-
 public class CompareCollectionsResult<T>
 {
     public List<T> OnlyInFirst;

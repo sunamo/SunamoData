@@ -5,7 +5,6 @@ SunamoUriWebServices
 SunamoData
 #endif
 ;
-
 public class AzureBuildUriArgs
 {
     public string personalAccessToken = null;

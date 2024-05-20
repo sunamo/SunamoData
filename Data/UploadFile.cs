@@ -13,7 +13,6 @@ SunamoFtp
 SunamoData
 #endif
 ;
-
 public class UploadFile
 {
     public UploadFile()

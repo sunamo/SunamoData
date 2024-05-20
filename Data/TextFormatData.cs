@@ -1,5 +1,3 @@
-
-
 namespace
 #if SunamoCl
 SunamoCl
@@ -11,7 +9,6 @@ SunamoText
 SunamoData
 #endif
 ;
-
 /// <summary>
 /// Alternatives: FormatOfString - allow as many as is chars in every match
 ///
@@ -25,7 +22,6 @@ public class TextFormatData : List<CharFormatData>
     /// </summary>
     public int requiredLength = -1;
     public bool trimBefore = false;
-
     public static class Templates
     {
     }

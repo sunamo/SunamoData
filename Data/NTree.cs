@@ -5,6 +5,8 @@ SunamoDictionary
 SunamoHtml
 #elif SunamoDevCode
 SunamoDevCode
+#elif SunamoWikipedia
+SunamoWikipedia
 #else
 SunamoData
 #endif

@@ -5,39 +5,31 @@ SunamoString
 SunamoData
 #endif
 ;
-
 public class SquareMapLines
 {
     public Dictionary<int, List<int>> cub;
     public Dictionary<int, List<int>> sqb;
     public Dictionary<int, List<int>> b;
-
     public Dictionary<int, List<int>> ecub;
     public Dictionary<int, List<int>> esqb;
     public Dictionary<int, List<int>> eb;
-
     void Init(int ccub, int csqb, int cb)
     {
         cub = new Dictionary<int, List<int>>(ccub);
         sqb = new Dictionary<int, List<int>>(csqb);
         b = new Dictionary<int, List<int>>(cb);
-
         ecub = new Dictionary<int, List<int>>(ccub);
         esqb = new Dictionary<int, List<int>>(csqb);
         eb = new Dictionary<int, List<int>>(cb);
     }
-
     public SquareMapLines(SquareMap m)
     {
         Init(m.cub.Count, m.sqb.Count, m.b.Count);
-
     }
-
     public SquareMapLines()
     {
         Init(0, 0, 0);
     }
-
     /// <summary>
     /// Musí být public kvůli Brackets které nemůžu importovat přímo z SunamoString kvůli Cycle detected
     /// </summary>
@@ -50,9 +42,7 @@ public class SquareMapLines
         // čti koment ve SquareMap.Add proč Object a zakomentováno zde.
         // Dalo by se to vyřešit tím že Brackets dám do samostatného nugetu ale už  to tu mám že mám v nugetu jen 1 enum
         // chce to vyřešit lépe 
-
         //Dictionary<int, List<int>> dict = null;
-
         //if (end)
         //{
         //    switch (b2)
@@ -89,7 +79,6 @@ public class SquareMapLines
         //            break;
         //    }
         //}
-
         //DictionaryHelper.AddOrCreate<int, int>(dict, line, i);
     }
 }

@@ -5,17 +5,14 @@ SunamoString
 SunamoData
 #endif
 ;
-
 public class SquareMap
 {
     public List<int> cub = new List<int>();
     public List<int> sqb = new List<int>();
     public List<int> b = new List<int>();
-
     public List<int> ecub = new List<int>();
     public List<int> esqb = new List<int>();
     public List<int> eb = new List<int>();
-
     public void Add(Object /*Brackets*/ b2, bool end, int i)
     {
         /*Spíše než na spoléhaní na public Brackets tak to dočasně zakomentuji.
@@ -58,7 +55,4 @@ public class SquareMap
         //    }
         //}
     }
-
-
-
 }

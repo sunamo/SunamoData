@@ -5,7 +5,6 @@ SunamoShared
 SunamoData
 #endif
 ;
-
 public class FileForSearching
 {
     public bool surelyNo = false;
@@ -13,12 +12,10 @@ public class FileForSearching
     public List<string> linesLower = null;
     public List<string> lines = null;
     string path = null;
-
     public FileForSearching(string path)
     {
         this.path = path;
     }
-
     public
 #if ASYNC
 async Task

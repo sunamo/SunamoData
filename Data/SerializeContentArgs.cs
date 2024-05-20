@@ -5,7 +5,6 @@ SunamoSerializer
 SunamoData
 #endif
 ;
-
 public class SerializeContentArgs
 {
     /// <summary>
@@ -19,7 +18,6 @@ public class SerializeContentArgs
         }
     }
     public string separatorString = AllStrings.verbar;
-
     public int keyCodeSeparator
     {
         get

@@ -5,14 +5,12 @@ SunamoString
 SunamoData
 #endif
 ;
-
 public class ABC : List<AB>//, IList<AB>
 {
     public static ABC Empty = new ABC();
     public ABC()
     {
     }
-
     public override string ToString()
     {
         StringBuilder sb = new StringBuilder();
@@ -22,7 +20,6 @@ public class ABC : List<AB>//, IList<AB>
         }
         return sb.ToString();
     }
-
     public int Length
     {
         get
@@ -30,7 +27,6 @@ public class ABC : List<AB>//, IList<AB>
             return Count;
         }
     }
-
     public ABC(int capacity) : base(capacity)
     {
         for (int i = 0; i < capacity; i++)
@@ -38,14 +34,12 @@ public class ABC : List<AB>//, IList<AB>
             this.Add(null);
         }
     }
-
     public ABC(params Object[] setsNameValue)
     {
         if (setsNameValue.Length == 0)
         {
             return;
         }
-
         var o = setsNameValue[0];
         var t = o.GetType();
         Type t2 = t;
@@ -55,14 +49,12 @@ public class ABC : List<AB>//, IList<AB>
             var o2 = s.Count != 0 ? s[0] : null;
             t2 = o2.GetType();
         }
-
         //var t2 = setsNameValue[0][0].GetType();
         if (t2 == typeof(AB))
         {
             //var abc = null;
             //if (true)
             //{
-
             //}
             for (int i = 0; i < setsNameValue.Length; i++)
             {
@@ -81,13 +73,11 @@ public class ABC : List<AB>//, IList<AB>
                         Add(ab);
                     }
                 }
-
             }
         }
         else if (t == typeof(ABC))
         {
             var abc = (ABC)o;
-
             this.AddRange(abc);
         }
         else
@@ -100,13 +90,11 @@ public class ABC : List<AB>//, IList<AB>
             }
         }
     }
-
     public ABC(params AB[] abc)
     {
         // TODO: Complete member initialization
         this.AddRange(abc);
     }
-
     /// <summary>
     /// Must be [] due to SQL viz  https://stackoverflow.com/questions/9149919/no-mapping-exists-from-object-type-system-collections-generic-list-when-executin
     /// </summary>
@@ -114,7 +102,6 @@ public class ABC : List<AB>//, IList<AB>
     {
         return OnlyBsList().ToArray();
     }
-
     public List<object> OnlyBsList()
     {
         List<object> o = new List<object>(this.Count);
@@ -124,7 +111,6 @@ public class ABC : List<AB>//, IList<AB>
         }
         return o;
     }
-
     public List<string> OnlyAs()
     {
         List<string> o = new List<string>(this.Count);
@@ -135,7 +121,6 @@ public class ABC : List<AB>//, IList<AB>
         }
         return o;
     }
-
     public static List<object> OnlyBs(List<AB> arr)
     {
         return arr.Select(d => d.B).ToList();

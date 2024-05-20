@@ -1,4 +1,3 @@
-
 namespace
 #if SunamoHtml
 SunamoHtml

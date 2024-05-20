@@ -1,4 +1,3 @@
-
 namespace
 #if SunamoDateTime
 SunamoDateTime
@@ -8,13 +7,6 @@ SunamoGoogleSheets
 SunamoData
 #endif
 ;
-
-
-
-
-
-
-
 /// <summary>
 /// Contains methods which was earlier in FromToT
 /// 
@@ -24,14 +16,12 @@ public class FromToT<T> : FromToTSH<T>, IParser where T : struct
 {
     public FromToT()
     {
-
         var t = typeof(T);
         if (t == Types.tInt)
         {
             ftUse = FromToUse.None;
         }
     }
-
     /// <summary>
     /// Use Empty contstant outside of class
     /// </summary>
@@ -40,7 +30,6 @@ public class FromToT<T> : FromToTSH<T>, IParser where T : struct
     {
         this.empty = empty;
     }
-
     /// <summary>
     /// A3 true = DateTime
     /// A3 False = None
@@ -54,8 +43,6 @@ public class FromToT<T> : FromToTSH<T>, IParser where T : struct
         this.to = to;
         this.ftUse = ftUse;
     }
-
-
     /// <summary>
     /// After it could be called IsFilledWithData
     /// </summary>
@@ -71,17 +58,14 @@ public class FromToT<T> : FromToTSH<T>, IParser where T : struct
         {
             v = new List<string>(new String[] { input });
         }
-
         if (v[0] == "0")
         {
             v[0] = "00:01";
         }
-
         if (v[1] == "24")
         {
             v[1] = "23:59";
         }
-
         var v0 = (long)ReturnSecondsFromTimeFormat(v[0]);
         fromL = v0;
         if (v.Count > 1)
@@ -90,13 +74,11 @@ public class FromToT<T> : FromToTSH<T>, IParser where T : struct
             toL = v1;
         }
     }
-
     public bool IsFilledWithData()
     {
         //from != 0 && - cant be, if entered 0-24 fails
         return toL >= 0 && toL != 0;
     }
-
     /// <summary>
     /// Use DTHelperCs.ToShortTimeFromSeconds to convert back
     /// </summary>
@@ -123,7 +105,6 @@ public class FromToT<T> : FromToTSH<T>, IParser where T : struct
         }
         return result;
     }
-
     public string ToString(Langs l)
     {
         if (empty)
@@ -147,7 +128,6 @@ public class FromToT<T> : FromToTSH<T>, IParser where T : struct
             }
         }
     }
-
     protected virtual string ToStringDateTime(Langs l)
     {
         return "";
