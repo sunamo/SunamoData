@@ -3,6 +3,8 @@ namespace
 SunamoDateTime
 #elif SunamoGoogleSheets
 SunamoGoogleSheets
+#elif SunamoGitBashBuilder
+    SunamoGitBashBuilder
 #else
 SunamoData
 #endif

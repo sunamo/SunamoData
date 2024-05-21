@@ -19,6 +19,8 @@ SunamoGoogleSheets
 SunamoStringReplace
 #elif SunamoString
 SunamoString
+#elif SunamoGitBashBuilder
+SunamoGitBashBuilder
 #else
 SunamoData
 #endif
