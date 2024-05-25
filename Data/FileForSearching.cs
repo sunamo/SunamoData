@@ -28,7 +28,7 @@ void
 #if ASYNC
 await
 #endif
-File.ReadAllLinesAsync(path)).ToList();
+File.ReadAllTextAsync(path)).ToList();
         linesLower = new List<string>(lines.Count);
         foreach (var item in lines)
         {
