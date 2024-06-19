@@ -12,10 +12,10 @@ SunamoData
 #endif
 ;
 public delegate void TreeVisitor<T>(T nodeData);
-/// <summary>
-/// Another big popular tree is on https://www.codeproject.com/Articles/12592/Generic-Tree-T-in-C
-/// </summary>
-/// <typeparam name="T"></typeparam>
+
+
+
+
 public class NTree<T>
 {
     public T data;
