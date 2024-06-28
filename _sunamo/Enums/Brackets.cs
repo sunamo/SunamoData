@@ -1,5 +1,5 @@
 namespace SunamoData;
-public enum Brackets
+internal enum Brackets
 {
     Curly,
     Square,
