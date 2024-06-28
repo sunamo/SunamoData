@@ -1,3 +1,5 @@
+
+namespace SunamoData;
 public class FromToList
 {
     public List<FromTo> c = new();

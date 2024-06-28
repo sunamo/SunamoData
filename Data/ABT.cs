@@ -1,3 +1,5 @@
+
+namespace SunamoData;
 public class ABT<Key, Value>
 {
     public Key A;

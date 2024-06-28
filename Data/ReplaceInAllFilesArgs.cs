@@ -1,3 +1,5 @@
+
+namespace SunamoData;
 /// <summary>
 /// Is passed into ReplaceInAllFilesWorker
 /// </summary>

@@ -1,3 +1,5 @@
+
+namespace SunamoData;
 public class HttpRequestData
 {
     public Dictionary<string, string> headers = new Dictionary<string, string>();

@@ -1,3 +1,5 @@
+
+namespace SunamoData;
 public class SquareMapLines
 {
     public Dictionary<int, List<int>> cub;

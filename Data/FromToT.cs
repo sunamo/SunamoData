@@ -1,3 +1,5 @@
+
+namespace SunamoData;
 /// <summary>
 /// Contains methods which was earlier in FromToT
 /// 

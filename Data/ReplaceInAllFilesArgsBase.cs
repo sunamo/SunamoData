@@ -1,3 +1,5 @@
+
+namespace SunamoData;
 public class ReplaceInAllFilesArgsBase
 {
     public List<string> files;

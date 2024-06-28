@@ -1,3 +1,5 @@
+
+namespace SunamoData;
 public class MedianAverage<T>
 {
     public T median;

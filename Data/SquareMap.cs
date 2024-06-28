@@ -1,3 +1,5 @@
+
+namespace SunamoData;
 public class SquareMap
 {
     public List<int> cub = new List<int>();

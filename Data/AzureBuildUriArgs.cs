@@ -1,3 +1,5 @@
+
+namespace SunamoData;
 public class AzureBuildUriArgs
 {
     public string personalAccessToken = null;

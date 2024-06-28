@@ -1,3 +1,5 @@
+
+namespace SunamoData;
 public class StoreParsedApp
 {
     public string name = null;

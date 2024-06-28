@@ -1,3 +1,5 @@
+
+namespace SunamoData;
 public delegate void TreeVisitor<T>(T nodeData);
 
 

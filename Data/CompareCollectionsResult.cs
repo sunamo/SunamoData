@@ -1,3 +1,5 @@
+
+namespace SunamoData;
 public class CompareCollectionsResult<T>
 {
     public List<T> OnlyInFirst;

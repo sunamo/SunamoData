@@ -1,3 +1,5 @@
+
+namespace SunamoData;
 /// <summary>
 /// Udává jak musí být vstupní text zformátovaný
 /// </summary>

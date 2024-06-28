@@ -1,3 +1,5 @@
+
+namespace SunamoData;
 public class FileForSearching
 {
     public bool surelyNo = false;

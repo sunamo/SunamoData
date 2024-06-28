@@ -1,3 +1,5 @@
+
+namespace SunamoData;
 public class Date
 {
     public int Day;

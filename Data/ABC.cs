@@ -1,3 +1,5 @@
+
+namespace SunamoData;
 public class ABC : List<AB>//, IList<AB>
 {
     public static ABC Empty = new ABC();

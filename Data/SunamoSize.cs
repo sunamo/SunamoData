@@ -1,3 +1,5 @@
+
+namespace SunamoData;
 public class SunamoSize //: IParser
 {
     public double Width { get; set; }

@@ -1,3 +1,4 @@
+namespace SunamoData;
 
 public class Speed
 {

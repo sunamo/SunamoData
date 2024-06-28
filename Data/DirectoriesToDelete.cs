@@ -1,3 +1,5 @@
+
+namespace SunamoData;
 public class DirectoriesToDelete
 {
     public int hloubka = 0;
