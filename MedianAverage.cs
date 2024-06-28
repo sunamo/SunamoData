@@ -1,12 +1,3 @@
-namespace
-#if SunamoNumbers
-SunamoNumbers
-#elif SunamoDictionary
-SunamoDictionary
-#else
-SunamoData
-#endif
-;
 public class MedianAverage<T>
 {
     public T median;
