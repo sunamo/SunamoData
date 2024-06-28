@@ -1,14 +1,3 @@
-namespace
-#if SunamoHtml
-SunamoHtml
-#elif SunamoDevCode
-SunamoDevCode
-#elif SunamoWikipedia
-SunamoWikipedia
-#else
-SunamoData
-#endif
-;
 public class CreateHtmlDocumentInitData
 {
     // Cant be, load

@@ -1,14 +1,3 @@
-namespace
-#if SunamoDateTime
-SunamoDateTime
-#elif SunamoGoogleSheets
-SunamoGoogleSheets
-#elif SunamoGitBashBuilder
-    SunamoGitBashBuilder
-#else
-SunamoData
-#endif
-;
 /// <summary>
 /// Contains methods which was earlier in FromToT
 /// 

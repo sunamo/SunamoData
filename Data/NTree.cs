@@ -1,16 +1,3 @@
-namespace
-#if SunamoDictionary
-SunamoDictionary
-#elif SunamoHtml
-SunamoHtml
-#elif SunamoDevCode
-SunamoDevCode
-#elif SunamoWikipedia
-SunamoWikipedia
-#else
-SunamoData
-#endif
-;
 public delegate void TreeVisitor<T>(T nodeData);
 
 

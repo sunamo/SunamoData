@@ -1,10 +1,3 @@
-namespace
-#if SunamoString
-SunamoString
-#else
-SunamoData
-#endif
-;
 public class SquareMapLines
 {
     public Dictionary<int, List<int>> cub;

@@ -1,10 +1,3 @@
-namespace
-#if SunamoGoogleSheets
-SunamoGoogleSheets
-#else
-SunamoData
-#endif
-;
 public class StoreParsedApp
 {
     public string name = null;

@@ -1,10 +1,3 @@
-namespace
-#if SunamoShared
-SunamoShared
-#else
-SunamoData
-#endif
-;
 public class WriteToJsonFileData
 {
     public Newtonsoft.Json.Formatting formatting = Newtonsoft.Json.Formatting.None;

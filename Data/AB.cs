@@ -1,12 +1,3 @@
-namespace
-#if SunamoCl
-SunamoCl
-#elif SunamoString
-SunamoString
-#else
-SunamoData
-#endif
-;
 public class AB
 {
     public static Type type = typeof(AB);

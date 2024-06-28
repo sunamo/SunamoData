@@ -1,10 +1,3 @@
-namespace
-#if SunamoShared
-SunamoShared
-#else
-SunamoData
-#endif
-;
 public class SunamoSize //: IParser
 {
     public double Width { get; set; }

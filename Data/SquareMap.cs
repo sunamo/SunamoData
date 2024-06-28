@@ -1,10 +1,3 @@
-namespace
-#if SunamoString
-SunamoString
-#else
-SunamoData
-#endif
-;
 public class SquareMap
 {
     public List<int> cub = new List<int>();

@@ -1,12 +1,3 @@
-namespace
-#if SunamoFluentFtp
-SunamoFluentFtp
-#elif SunamoFtp
-SunamoFtp
-#else
-SunamoData
-#endif
-;
 public class DirectoriesToDelete
 {
     public int hloubka = 0;

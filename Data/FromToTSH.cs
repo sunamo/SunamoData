@@ -1,30 +1,3 @@
-namespace
-#if SunamoCl
-SunamoCl
-#elif SunamoCollectionsGeneric
-SunamoCollectionsGeneric
-#elif SunamoCollectionsGenericShared
-SunamoCollectionsGenericShared
-#elif SunamoCollections
-SunamoCollections
-#elif SunamoDevCode
-SunamoDevCode
-#elif SunamoDateTime
-SunamoDateTime
-#elif SunamoDevCode
-SunamoDevCode
-#elif SunamoGoogleSheets
-SunamoGoogleSheets
-#elif SunamoStringReplace
-SunamoStringReplace
-#elif SunamoString
-SunamoString
-#elif SunamoGitBashBuilder
-SunamoGitBashBuilder
-#else
-SunamoData
-#endif
-;
 public class FromToTSH<T>
 {
     

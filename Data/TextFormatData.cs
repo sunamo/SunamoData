@@ -1,14 +1,3 @@
-namespace
-#if SunamoCl
-SunamoCl
-#elif SunamoString
-SunamoString
-#elif SunamoText
-SunamoText
-#else
-SunamoData
-#endif
-;
 /// <summary>
 /// Alternatives: FormatOfString - allow as many as is chars in every match
 ///

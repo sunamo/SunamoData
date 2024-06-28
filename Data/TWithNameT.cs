@@ -1,10 +1,3 @@
-namespace
-#if SunamoDevCode
-SunamoDevCode
-#else
-SunamoData
-#endif
-;
 public class TWithNameT<T>
 {
     /// <summary>

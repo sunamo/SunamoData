@@ -1,12 +1,3 @@
-namespace
-#if SunamoString
-SunamoString
-#elif SunamoCl
-SunamoCl
-#else
-SunamoData
-#endif
-;
 /// <summary>
 /// Udává jak musí být vstupní text zformátovaný
 /// </summary>

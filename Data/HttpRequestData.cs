@@ -1,10 +1,3 @@
-namespace
-#if SunamoShared
-SunamoShared
-#else
-SunamoData
-#endif
-;
 public class HttpRequestData
 {
     public Dictionary<string, string> headers = new Dictionary<string, string>();

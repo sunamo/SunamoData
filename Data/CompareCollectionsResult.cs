@@ -1,10 +1,3 @@
-namespace
-#if SunamoTextOutputGenerator
-SunamoTextOutputGenerator
-#else
-SunamoData
-#endif
-;
 public class CompareCollectionsResult<T>
 {
     public List<T> OnlyInFirst;

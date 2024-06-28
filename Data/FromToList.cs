@@ -1,16 +1,3 @@
-namespace
-#if SunamoString
-SunamoString
-#elif SunamoStringShared
-SunamoStringShared
-#elif SunamoDevCode
-SunamoDevCode
-#elif SunamoDevCode
-SunamoDevCode
-#else
-SunamoData
-#endif
-;
 public class FromToList
 {
     public List<FromTo> c = new();
