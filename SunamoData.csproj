@@ -11,7 +11,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Data\_majiDepsNaNěčemCoNemůžuTeďZkompilovat\" />
-    <Folder Include="Enums\" />
     <Folder Include="_linked\" />
     <Folder Include="_\" />
   </ItemGroup>

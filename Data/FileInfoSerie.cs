@@ -1,3 +1,5 @@
+using SunamoData.Enums;
+
 namespace SunamoData;
 
 public class FileInfoSerie : FileInfoLite
