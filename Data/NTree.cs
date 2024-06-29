@@ -2,7 +2,11 @@
 namespace SunamoData;
 public delegate void TreeVisitor<T>(T nodeData);
 
+//public delegate void A();
 
+/*
+public delegate void A();
+*/
 
 
 public class NTree<T>
