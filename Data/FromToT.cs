@@ -12,7 +12,7 @@ public class FromToT<T> : FromToTSH<T>, IParser where T : struct
         var t = typeof(T);
         if (t == Types.tInt)
         {
-            ftUse = FromToUse.None;
+            ftUse = FromToUseData.None;
         }
     }
     /// <summary>
@@ -30,7 +30,7 @@ public class FromToT<T> : FromToTSH<T>, IParser where T : struct
     /// <param name="from"></param>
     /// <param name="to"></param>
     /// <param name="ftUse"></param>
-    public FromToT(T from, T to, FromToUse ftUse = FromToUse.DateTime) : this()
+    public FromToT(T from, T to, FromToUseData ftUse = FromToUseData.DateTime) : this()
     {
         this.from = from;
         this.to = to;
@@ -98,7 +98,7 @@ public class FromToT<T> : FromToTSH<T>, IParser where T : struct
         }
         return result;
     }
-    public string ToString(Langs l)
+    public string ToString()
     {
         if (empty)
         {
@@ -106,11 +106,11 @@ public class FromToT<T> : FromToTSH<T>, IParser where T : struct
         }
         else
         {
-            if (new List<FromToUse>([FromToUse.DateTime, FromToUse.Unix, FromToUse.UnixJustTime]).Any(d => d == ftUse))
+            if (new List<FromToUseData>([FromToUseData.DateTime, FromToUseData.Unix, FromToUseData.UnixJustTime]).Any(d => d == ftUse))
             {
-                return ToStringDateTime(l);
+                return ToStringDateTime();
             }
-            else if (ftUse == FromToUse.None)
+            else if (ftUse == FromToUseData.None)
             {
                 return from + "-" + to;
             }
@@ -121,7 +121,7 @@ public class FromToT<T> : FromToTSH<T>, IParser where T : struct
             }
         }
     }
-    protected virtual string ToStringDateTime(Langs l)
+    protected virtual string ToStringDateTime()
     {
         return "";
     }

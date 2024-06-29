@@ -5,12 +5,12 @@ public class FromToTSH<T>
     
     public bool empty;
     protected long fromL;
-    public FromToUse ftUse = FromToUse.DateTime;
+    public FromToUseData ftUse = FromToUseData.DateTime;
     protected long toL;
     public FromToTSH()
     {
         var t = typeof(T);
-        if (t == Types.tInt) ftUse = FromToUse.None;
+        if (t == Types.tInt) ftUse = FromToUseData.None;
     }
     /// <summary>
     ///     Use Empty contstant outside of class
@@ -27,7 +27,7 @@ public class FromToTSH<T>
     /// <param name="from"></param>
     /// <param name="to"></param>
     /// <param name="ftUse"></param>
-    public FromToTSH(T from, T to, FromToUse ftUse = FromToUse.DateTime) : this()
+    public FromToTSH(T from, T to, FromToUseData ftUse = FromToUseData.DateTime) : this()
     {
         this.from = from;
         this.to = to;

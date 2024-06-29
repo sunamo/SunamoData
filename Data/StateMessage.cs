@@ -2,16 +2,16 @@ namespace SunamoData;
 
 public class StateMessage
 {
-    protected TypeOfMessage mt = TypeOfMessage.Information;
+    protected string mt = "Information";
     protected string message = null;
 
-    public StateMessage(TypeOfMessage mt, string message)
+    public StateMessage(string mt, string message)
     {
         this.mt = mt;
         this.message = message;
     }
 
-    public TypeOfMessage TypeOfMessage
+    public string TypeOfMessage
     {
         get
         {

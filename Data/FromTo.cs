@@ -25,7 +25,7 @@ public class FromTo : FromToTSH<long>
     /// <param name="from"></param>
     /// <param name="to"></param>
     /// <param name="ftUse"></param>
-    public FromTo(long from, long to, FromToUse ftUse = FromToUse.DateTime)
+    public FromTo(long from, long to, FromToUseData ftUse = FromToUseData.DateTime)
     {
         this.from = from;
         this.to = to;
