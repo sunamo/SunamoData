@@ -1,6 +1,6 @@
 
 namespace SunamoData;
-public delegate void TreeVisitor<T>(T nodeData);
+//public delegate void Action<T>(T nodeData);
 
 //public delegate void A();
 
@@ -31,7 +31,7 @@ public class NTree<T>
                 return n;
         return null;
     }
-    public void Traverse(NTree<T> node, TreeVisitor<T> visitor)
+    public void Traverse(NTree<T> node, Action<T> visitor)
     {
         visitor(node.data);
         foreach (NTree<T> kid in node.children)
