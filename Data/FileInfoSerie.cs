@@ -1,5 +1,3 @@
-
-
 namespace SunamoData.Data;
 
 public class FileInfoSerie : FileInfoLite

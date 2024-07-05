@@ -1,4 +1,3 @@
-
 namespace SunamoData.Data;
 /// <summary>
 ///     Must have always entered both from and to

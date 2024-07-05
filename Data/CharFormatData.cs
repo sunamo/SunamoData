@@ -1,4 +1,3 @@
-
 namespace SunamoData.Data;
 /// <summary>
 /// Udává jak musí být vstupní text zformátovaný

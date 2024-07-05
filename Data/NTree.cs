@@ -1,4 +1,3 @@
-
 namespace SunamoData.Data;
 //public delegate void Action<T>(T nodeData);
 

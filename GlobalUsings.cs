@@ -25,3 +25,5 @@ global using SunamoData._sunamo.SunamoExceptions._AddedToAllCsproj;
 global using SunamoData._sunamo.SunamoInterfaces.Interfaces;
 global using SunamoData._sunamo.SunamoString.Enums;
 global using SunamoData._sunamo.SunamoValues.Constants;
+global using System.Diagnostics;
+global using System.Net;

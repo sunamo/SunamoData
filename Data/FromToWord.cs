@@ -1,4 +1,3 @@
-
 namespace SunamoData.Data;
 public class FromToWord
 {
