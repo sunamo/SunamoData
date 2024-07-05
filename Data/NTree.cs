@@ -1,5 +1,5 @@
 
-namespace SunamoData;
+namespace SunamoData.Data;
 //public delegate void Action<T>(T nodeData);
 
 //public delegate void A();

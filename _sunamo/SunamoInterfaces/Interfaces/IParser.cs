@@ -1,4 +1,4 @@
-namespace SunamoData;
+namespace SunamoData._sunamo.SunamoInterfaces.Interfaces;
 
 
 internal interface IParser

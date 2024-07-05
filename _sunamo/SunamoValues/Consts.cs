@@ -1,4 +1,4 @@
-namespace SunamoData;
+namespace SunamoData._sunamo.SunamoValues;
 
 
 

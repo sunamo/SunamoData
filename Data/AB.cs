@@ -1,5 +1,5 @@
 
-namespace SunamoData;
+namespace SunamoData.Data;
 public class AB
 {
     public static Type type = typeof(AB);

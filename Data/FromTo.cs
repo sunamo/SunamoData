@@ -1,5 +1,5 @@
 
-namespace SunamoData;
+namespace SunamoData.Data;
 /// <summary>
 ///     Must have always entered both from and to
 ///     None of event could have unlimited time!

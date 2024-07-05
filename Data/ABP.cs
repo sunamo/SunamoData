@@ -1,4 +1,4 @@
-namespace SunamoData;
+namespace SunamoData.Data;
 
 /// <summary>
 /// Je to zkratka AB Property - obsahuje vlastnosti místo veřejných proměnných

@@ -1,6 +1,6 @@
 
 
-namespace SunamoData;
+namespace SunamoData.Data;
 
 public class FileInfoSerie : FileInfoLite
 {

@@ -1,4 +1,4 @@
-namespace SunamoData;
+namespace SunamoData.Data;
 
 /// <summary>
 /// Used for example in HostingManager

@@ -1,4 +1,4 @@
-namespace SunamoData;
+namespace SunamoData.Data;
 
 /// <summary>
 /// null is neutral(if has before and after same state, is considered as this state)

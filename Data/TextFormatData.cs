@@ -1,5 +1,5 @@
 
-namespace SunamoData;
+namespace SunamoData.Data;
 /// <summary>
 /// Alternatives: FormatOfString - allow as many as is chars in every match
 ///

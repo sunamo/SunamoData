@@ -1,4 +1,4 @@
-namespace SunamoData;
+namespace SunamoData.Data;
 
 /// <summary>
 /// Ve výchozím stavu budou se vždy brát všechny verše, nebo cokoliv jiného

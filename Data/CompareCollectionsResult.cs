@@ -1,5 +1,5 @@
 
-namespace SunamoData;
+namespace SunamoData.Data;
 public class CompareCollectionsResult<T>
 {
     public List<T> OnlyInFirst;

@@ -1,4 +1,4 @@
-namespace SunamoData;
+namespace SunamoData.Data;
 
 public class TWithBool<T> //: ITWithDt<T>
 {

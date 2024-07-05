@@ -1,5 +1,5 @@
 
-namespace SunamoData;
+namespace SunamoData.Data;
 public class ABT<Key, Value>
 {
     public Key A;
