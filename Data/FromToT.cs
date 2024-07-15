@@ -1,4 +1,5 @@
 namespace SunamoData.Data;
+
 /// <summary>
 /// Contains methods which was earlier in FromToT
 /// 
@@ -44,7 +45,7 @@ public class FromToT<T> : FromToTSH<T>, IParser where T : struct
         List<string> v = null;
         if (input.Contains(AllStrings.dash))
         {
-            v = input.Split(AllChars.dash).ToList(); //SHSplit.SplitChar(input, new Char[] { AllChars.dash });
+            v = input.Split(AllChars.dash).ToList(); //SHSplit.SplitCharMore(input, new Char[] { AllChars.dash });
         }
         else
         {

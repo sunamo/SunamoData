@@ -1,3 +1,5 @@
+using SunamoData._sunamo;
+
 namespace SunamoData.Data;
 
 public class XPathPart
@@ -19,7 +21,7 @@ public class XPathPart
             {
                 if (attr[0] == '@')
                 {
-                    var nameValue = SHSunamoExceptions.SplitChar(attr.Substring(1), new char[] { AllChars.qm, AllChars.bs, '=' });
+                    var nameValue = SHSplit.SplitCharMore(attr.Substring(1), AllChars.qm, AllChars.bs, '=');
                     if (nameValue.Count == 2)
                     {
                         if (nameValue[0] != "")
