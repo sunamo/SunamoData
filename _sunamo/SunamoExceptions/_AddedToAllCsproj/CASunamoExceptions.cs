@@ -1,6 +1,6 @@
-namespace SunamoData._sunamo.SunamoExceptions._AddedToAllCsproj;
+//namespace SunamoData._sunamo.SunamoExceptions._AddedToAllCsproj;
 
-internal class CASunamoExceptions
+internal class CA
 {
 
 }

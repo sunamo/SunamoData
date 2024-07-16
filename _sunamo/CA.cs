@@ -1,10 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace SunamoData._sunamo;
+using System.Collections.Generic;
+using System.Linq;
+
 public class CA
 {
     internal static bool IsListStringWrappedInArray<T>(List<T> v2)
