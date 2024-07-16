@@ -3,7 +3,7 @@ namespace SunamoData.Data;
 ///     Must have always entered both from and to
 ///     None of event could have unlimited time!
 /// </summary>
-public class FromTo : FromToTSH<long>
+public class FromTo : FromToT<long>
 {
     public static FromTo Empty = new(true);
     public FromTo()

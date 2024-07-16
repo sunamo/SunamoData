@@ -5,7 +5,7 @@ namespace SunamoData.Data;
 /// 
 /// </summary>
 /// <typeparam name="T"></typeparam>
-public class FromToT<T> : FromToTSH<T>, IParser where T : struct
+public class FromToT<T> : IParser where T : struct
 {
     public FromToT()
     {
@@ -36,6 +36,9 @@ public class FromToT<T> : FromToTSH<T>, IParser where T : struct
         this.to = to;
         this.ftUse = ftUse;
     }
+
+
+
     /// <summary>
     /// After it could be called IsFilledWithData
     /// </summary>
@@ -125,4 +128,23 @@ public class FromToT<T> : FromToTSH<T>, IParser where T : struct
     {
         return "";
     }
+
+
+    public bool empty;
+    protected long fromL;
+    public FromToUseData ftUse = FromToUseData.DateTime;
+    protected long toL;
+
+    public T from
+    {
+        get => (T)(dynamic)fromL;
+        set => fromL = (long)(dynamic)value;
+    }
+    public T to
+    {
+        get => (T)(dynamic)toL;
+        set => toL = (long)(dynamic)value;
+    }
+    public long FromL => fromL;
+    public long ToL => toL;
 }
