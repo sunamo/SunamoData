@@ -3,7 +3,7 @@ namespace SunamoData._sunamo;
 using System.Collections.Generic;
 using System.Linq;
 
-public class CA
+internal class CA
 {
     internal static bool IsListStringWrappedInArray<T>(List<T> v2)
     {
@@ -30,7 +30,7 @@ public class CA
             arr.Add(default);
         }
     }
-    public static List<string> Trim(List<string> l)
+    internal static List<string> Trim(List<string> l)
     {
         for (var i = 0; i < l.Count; i++) l[i] = l[i].Trim();
         return l;
