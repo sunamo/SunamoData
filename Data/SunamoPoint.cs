@@ -2,9 +2,6 @@ namespace SunamoData.Data;
 
 public class SunamoPoint
 {
-    public double X { get; set; }
-    public double Y { get; set; }
-
     public SunamoPoint()
     {
     }
@@ -14,6 +11,9 @@ public class SunamoPoint
         X = x;
         Y = y;
     }
+
+    public double X { get; set; }
+    public double Y { get; set; }
 
     public void Parse(string input)
     {

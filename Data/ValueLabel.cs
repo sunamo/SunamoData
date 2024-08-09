@@ -2,41 +2,18 @@ namespace SunamoData.Data;
 
 public class ValueLabel
 {
-    private string _value2 = null;
-    private string _label2 = null;
-
-    public string value
-    {
-        get
-        {
-            return _value2;
-        }
-        set
-        {
-            _value2 = value;
-        }
-    }
-
-    public string label
-    {
-        get
-        {
-            return _label2;
-        }
-        set
-        {
-            _label2 = value;
-        }
-    }
-
     public ValueLabel(string value, string label)
     {
-        _value2 = value;
-        _label2 = label;
+        this.value = value;
+        this.label = label;
     }
 
+    public string value { get; set; }
+
+    public string label { get; set; }
+
     /// <summary>
-    /// Ginstantion O AB
+    ///     Ginstantion O AB
     /// </summary>
     /// <param name="a"></param>
     /// <param name="b"></param>

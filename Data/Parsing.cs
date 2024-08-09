@@ -1,7 +1,6 @@
 namespace SunamoData.Data;
 
 /// <summary>
-///
 /// </summary>
 /// <typeparam name="T1"></typeparam>
 /// <typeparam name="T2"></typeparam>

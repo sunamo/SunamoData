@@ -2,12 +2,12 @@ namespace SunamoData.Data;
 
 public class OTS
 {
-    public object A = null;
-    public object B = null;
+    public object A;
+    public object B;
 
     public static OTS Get(object a, object b)
     {
-        OTS ots = new OTS();
+        var ots = new OTS();
         ots.A = a;
         ots.B = b;
         return ots;
@@ -15,6 +15,6 @@ public class OTS
 
     public override string ToString()
     {
-        return A.ToString() + AllStrings.space + B.ToString();
+        return A + AllStrings.space + B;
     }
 }

@@ -1,7 +1,7 @@
 namespace SunamoData.Data;
 
 /// <summary>
-/// Implicitly are strings.Empty to avoid cheching data class for null
+///     Implicitly are strings.Empty to avoid cheching data class for null
 /// </summary>
 public class ABS : ABT<string, string>
 {

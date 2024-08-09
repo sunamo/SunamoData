@@ -11,7 +11,7 @@ public class SunamoHttpPostedFile
         this.ContentLength = ContentLength;
         this.ContentType = ContentType;
 
-        MemoryStream ms = new MemoryStream();
+        var ms = new MemoryStream();
         InputStream.CopyTo(ms);
 
         Bytes = ms.ToArray().ToList();
@@ -27,14 +27,13 @@ public class SunamoHttpPostedFile
     }
 
     public long ContentLength { get; set; }
+
     public string ContentType { get; set; }
+
     //public Stream InputStream { get; set; }
     public List<byte> Bytes { get; set; }
 
-    public string FileName
-    {
-        get; set;
-    }
+    public string FileName { get; set; }
 
     public async Task SaveAs(string filename)
     {

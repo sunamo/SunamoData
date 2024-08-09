@@ -2,9 +2,12 @@ namespace SunamoData.Data;
 
 public class TWithString<T>
 {
+    public string path;
+
+    public T t;
+
     public TWithString()
     {
-
     }
 
     public TWithString(T t, string path)
@@ -12,9 +15,6 @@ public class TWithString<T>
         this.t = t;
         this.path = path;
     }
-
-    public T t = default;
-    public string path = null;
 
     public override string ToString()
     {

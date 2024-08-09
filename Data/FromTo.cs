@@ -1,4 +1,5 @@
 namespace SunamoData.Data;
+
 /// <summary>
 ///     Must have always entered both from and to
 ///     None of event could have unlimited time!
@@ -6,9 +7,11 @@ namespace SunamoData.Data;
 public class FromTo : FromToT<long>
 {
     public static FromTo Empty = new(true);
+
     public FromTo()
     {
     }
+
     /// <summary>
     ///     Use Empty contstant outside of class
     /// </summary>
@@ -17,6 +20,7 @@ public class FromTo : FromToT<long>
     {
         this.empty = empty;
     }
+
     /// <summary>
     ///     A3 true = DateTime
     ///     A3 False = None

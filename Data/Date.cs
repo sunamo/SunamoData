@@ -1,4 +1,5 @@
 namespace SunamoData.Data;
+
 public class Date
 {
     public int Day;

@@ -2,9 +2,9 @@ namespace SunamoData.Data;
 
 public class ReplaceArgs
 {
-    public string initialMessage = null;
-    public string lblOldValue = null;
-    public string lblNewValue = null;
+    public string initialMessage;
+    public string lblNewValue;
+    public string lblOldValue;
 
     public ReplaceArgs(string initialMessage, string lblOldValue, string lblNewValue)
     {

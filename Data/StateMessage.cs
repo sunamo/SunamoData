@@ -2,8 +2,8 @@ namespace SunamoData.Data;
 
 public class StateMessage
 {
+    protected string message;
     protected string mt = "Information";
-    protected string message = null;
 
     public StateMessage(string mt, string message)
     {
@@ -11,19 +11,7 @@ public class StateMessage
         this.message = message;
     }
 
-    public string TypeOfMessage
-    {
-        get
-        {
-            return mt;
-        }
-    }
+    public string TypeOfMessage => mt;
 
-    public string TextMessage
-    {
-        get
-        {
-            return message;
-        }
-    }
+    public string TextMessage => message;
 }

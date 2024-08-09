@@ -1,31 +1,34 @@
 namespace SunamoData.Data;
 
 /// <summary>
-/// Contains methods which was earlier in FromToT
-/// 
+///     Contains methods which was earlier in FromToT
 /// </summary>
 /// <typeparam name="T"></typeparam>
 public class FromToT<T> : IParser where T : struct
 {
+    public bool empty;
+    protected long fromL;
+    public FromToUseData ftUse = FromToUseData.DateTime;
+    protected long toL;
+
     public FromToT()
     {
         var t = typeof(T);
-        if (t == Types.tInt)
-        {
-            ftUse = FromToUseData.None;
-        }
+        if (t == Types.tInt) ftUse = FromToUseData.None;
     }
+
     /// <summary>
-    /// Use Empty contstant outside of class
+    ///     Use Empty contstant outside of class
     /// </summary>
     /// <param name="empty"></param>
     private FromToT(bool empty) : this()
     {
         this.empty = empty;
     }
+
     /// <summary>
-    /// A3 true = DateTime
-    /// A3 False = None
+    ///     A3 true = DateTime
+    ///     A3 False = None
     /// </summary>
     /// <param name="from"></param>
     /// <param name="to"></param>
@@ -37,31 +40,35 @@ public class FromToT<T> : IParser where T : struct
         this.ftUse = ftUse;
     }
 
+    public T from
+    {
+        get => (T)(dynamic)fromL;
+        set => fromL = (long)(dynamic)value;
+    }
+
+    public T to
+    {
+        get => (T)(dynamic)toL;
+        set => toL = (long)(dynamic)value;
+    }
+
+    public long FromL => fromL;
+    public long ToL => toL;
 
 
     /// <summary>
-    /// After it could be called IsFilledWithData
+    ///     After it could be called IsFilledWithData
     /// </summary>
     /// <param name="input"></param>
     public void Parse(string input)
     {
         List<string> v = null;
         if (input.Contains(AllStrings.dash))
-        {
             v = input.Split(AllChars.dash).ToList(); //SHSplit.SplitCharMore(input, new Char[] { AllChars.dash });
-        }
         else
-        {
-            v = new List<string>(new String[] { input });
-        }
-        if (v[0] == "0")
-        {
-            v[0] = "00:01";
-        }
-        if (v[1] == "24")
-        {
-            v[1] = "23:59";
-        }
+            v = new List<string>(new[] { input });
+        if (v[0] == "0") v[0] = "00:01";
+        if (v[1] == "24") v[1] = "23:59";
         var v0 = (long)ReturnSecondsFromTimeFormat(v[0]);
         fromL = v0;
         if (v.Count > 1)
@@ -70,81 +77,58 @@ public class FromToT<T> : IParser where T : struct
             toL = v1;
         }
     }
+
     public bool IsFilledWithData()
     {
         //from != 0 && - cant be, if entered 0-24 fails
         return toL >= 0 && toL != 0;
     }
+
     /// <summary>
-    /// Use DTHelperCs.ToShortTimeFromSeconds to convert back
+    ///     Use DTHelperCs.ToShortTimeFromSeconds to convert back
     /// </summary>
     /// <param name="v"></param>
     /// <returns></returns>
     private int ReturnSecondsFromTimeFormat(string v)
     {
-        int result = 0;
+        var result = 0;
         if (v.Contains(AllStrings.colon))
         {
-            var parts = v.Split(AllChars.colon).ToList().ConvertAll(d => int.Parse(d)); //SHSplit.SplitToIntList(v, new String[] { AllStrings.colon });
+            var parts = v.Split(AllChars.colon).ToList()
+                .ConvertAll(d => int.Parse(d)); //SHSplit.SplitToIntList(v, new String[] { AllStrings.colon });
             result += parts[0] * (int)DTConstants.secondsInHour;
-            if (parts.Count > 1)
-            {
-                result += parts[1] * (int)DTConstants.secondsInMinute;
-            }
+            if (parts.Count > 1) result += parts[1] * (int)DTConstants.secondsInMinute;
         }
         else
         {
-            if (int.TryParse(v, out var _))
-            {
-                result += int.Parse(v) * (int)DTConstants.secondsInHour;
-            }
+            if (int.TryParse(v, out var _)) result += int.Parse(v) * (int)DTConstants.secondsInHour;
         }
+
         return result;
     }
+
     public string ToString()
     {
-        if (empty)
+        if (empty) return string.Empty;
+
+        if (new List<FromToUseData>([FromToUseData.DateTime, FromToUseData.Unix, FromToUseData.UnixJustTime]).Any(d =>
+            d == ftUse))
         {
-            return string.Empty;
+            return ToStringDateTime();
+        }
+        else if (ftUse == FromToUseData.None)
+        {
+            return from + "-" + to;
         }
         else
         {
-            if (new List<FromToUseData>([FromToUseData.DateTime, FromToUseData.Unix, FromToUseData.UnixJustTime]).Any(d => d == ftUse))
-            {
-                return ToStringDateTime();
-            }
-            else if (ftUse == FromToUseData.None)
-            {
-                return from + "-" + to;
-            }
-            else
-            {
-                ThrowEx.NotImplementedCase(ftUse);
-                return string.Empty;
-            }
+            ThrowEx.NotImplementedCase(ftUse);
+            return string.Empty;
         }
     }
+
     protected virtual string ToStringDateTime()
     {
         return "";
     }
-
-
-    public bool empty;
-    protected long fromL;
-    public FromToUseData ftUse = FromToUseData.DateTime;
-    protected long toL;
-
-    public T from
-    {
-        get => (T)(dynamic)fromL;
-        set => fromL = (long)(dynamic)value;
-    }
-    public T to
-    {
-        get => (T)(dynamic)toL;
-        set => toL = (long)(dynamic)value;
-    }
-    public long FromL => fromL;
-    public long ToL => toL;
 }

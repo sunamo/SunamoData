@@ -1,7 +1,7 @@
 namespace SunamoData.Data;
 
 /// <summary>
-/// Ve výchozím stavu budou se vždy brát všechny verše, nebo cokoliv jiného
+///     Ve výchozím stavu budou se vždy brát všechny verše, nebo cokoliv jiného
 /// </summary>
 public class AllItems
 {

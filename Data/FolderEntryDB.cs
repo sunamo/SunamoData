@@ -10,12 +10,12 @@ public class FolderEntryDB : FolderEntry
     }
 
     public FolderEntryDB(string RelativePath)
-    : base(RelativePath)
+        : base(RelativePath)
     {
     }
 
     public override string ToString()
     {
-        return RelativePath.ToString();
+        return RelativePath;
     }
 }

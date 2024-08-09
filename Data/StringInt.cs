@@ -1,14 +1,13 @@
-
-namespace SunamoData.Data;
 using SunamoData._sunamo;
 
+namespace SunamoData.Data;
+
 /// <summary>
-///
 /// </summary>
 public class StringInt : Parsing<string, int>
 {
     /// <summary>
-    /// Serializuje na string a int A1
+    ///     Serializuje na string a int A1
     /// </summary>
     /// <param name="obsah"></param>
     public override void ParsujM(string obsah)

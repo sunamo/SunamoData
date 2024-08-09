@@ -2,14 +2,14 @@ namespace SunamoData.Data;
 
 public class GoogleMapsSearchResult
 {
-    public string name = string.Empty;
-    public string typeOfBusiness = Consts.se;
-    public int ratingCount;
-    public float rating;
-    public string phone = string.Empty;
     public string address = string.Empty;
-    public string uri = string.Empty;
-    public bool ReservationRequired = false;
-    public string OpeningHours = string.Empty;
     public string mail = string.Empty;
+    public string name = string.Empty;
+    public string OpeningHours = string.Empty;
+    public string phone = string.Empty;
+    public float rating;
+    public int ratingCount;
+    public bool ReservationRequired = false;
+    public string typeOfBusiness = Consts.se;
+    public string uri = string.Empty;
 }

@@ -2,10 +2,10 @@ namespace SunamoData.Data;
 
 public class FolderEntry
 {
-    public string RelativePath = null;
+    public string RelativePath;
 
     /// <summary>
-    /// A1 je skutečně relativní plná cesta, abych snadno mohl získat pouze získáním naduzlu a rootu celou cestu
+    ///     A1 je skutečně relativní plná cesta, abych snadno mohl získat pouze získáním naduzlu a rootu celou cestu
     /// </summary>
     /// <param name="ID"></param>
     /// <param name="DirectoryName"></param>

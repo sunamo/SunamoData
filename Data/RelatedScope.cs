@@ -1,11 +1,11 @@
 namespace SunamoData.Data;
 
 /// <summary>
-/// null is neutral(if has before and after same state, is considered as this state)
+///     null is neutral(if has before and after same state, is considered as this state)
 /// </summary>
 public class RelatedScope
 {
-    private bool?[] _states = null;
+    private readonly bool?[] _states;
 
     public RelatedScope(int arraySize)
     {
@@ -18,22 +18,21 @@ public class RelatedScope
     }
 
     /// <summary>
-    /// Is used for deleting regions blocks. All lines between must dont exists or be empty
+    ///     Is used for deleting regions blocks. All lines between must dont exists or be empty
     /// </summary>
     /// <param name="def"></param>
     /// <param name="b"></param>
     public List<FromTo> RangeFromStateSimple(List<int> startIndexes)
     {
-        List<FromTo> foundedRanges = new List<FromTo>();
+        var foundedRanges = new List<FromTo>();
 
-        bool insideRegion = false;
-        FromTo fromTo = new FromTo();
+        var insideRegion = false;
+        var fromTo = new FromTo();
 
-        for (int i = 0; i < _states.Length; i++)
+        for (var i = 0; i < _states.Length; i++)
         {
-            bool? b = _states[i];
+            var b = _states[i];
             if (b.HasValue)
-            {
                 if (b.Value)
                 {
                     if (insideRegion)
@@ -57,28 +56,27 @@ public class RelatedScope
                         fromTo.from = i;
                     }
                 }
-            }
         }
 
         return foundedRanges;
     }
 
     /// <summary>
-    /// Was used for deleting comments. Returns serie only when is all lines between is comments
+    ///     Was used for deleting comments. Returns serie only when is all lines between is comments
     /// </summary>
     /// <param name="def"></param>
     /// <param name="b"></param>
     public List<FromTo> RangeFromState(bool def, bool b)
     {
-        List<FromTo> foundedRanges = new List<FromTo>();
+        var foundedRanges = new List<FromTo>();
         // true - is in code block. false - in non-code block
-        bool previous = def;
-        FromTo fromTo = new FromTo();
+        var previous = def;
+        var fromTo = new FromTo();
         fromTo.from = 0;
 
-        for (int i = 0; i < _states.Length; i++)
+        for (var i = 0; i < _states.Length; i++)
         {
-            bool? state = _states[i];
+            var state = _states[i];
             // If line have some content
             if (state.HasValue)
             {
@@ -89,10 +87,7 @@ public class RelatedScope
                     if (!previous)
                     {
                         fromTo.to = i - 1;
-                        if (fromTo.from != fromTo.to)
-                        {
-                            foundedRanges.Add(fromTo);
-                        }
+                        if (fromTo.from != fromTo.to) foundedRanges.Add(fromTo);
                         previous = true;
                     }
                 }
@@ -113,10 +108,7 @@ public class RelatedScope
         if (!previous)
         {
             fromTo.to = _states.Length - 1 - 1 + 1;
-            if (fromTo.from != fromTo.to)
-            {
-                foundedRanges.Add(fromTo);
-            }
+            if (fromTo.from != fromTo.to) foundedRanges.Add(fromTo);
         }
 
         return foundedRanges;

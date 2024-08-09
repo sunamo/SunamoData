@@ -2,8 +2,8 @@ namespace SunamoData.Data;
 
 public class TWithSizeInString<T>
 {
-    public T t = default;
     public string sizeS = "";
+    public T t = default;
 
     public override string ToString()
     {

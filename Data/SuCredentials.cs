@@ -15,7 +15,6 @@ public class SuCredentials
 
     public SuCredentials()
     {
-
     }
 
     public string Login { get; set; }
