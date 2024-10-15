@@ -14,7 +14,7 @@ public class FromToT<T> : IParser where T : struct
     public FromToT()
     {
         var t = typeof(T);
-        if (t == Types.tInt) ftUse = FromToUseData.None;
+        if (t == typeof(int)) ftUse = FromToUseData.None;
     }
 
     /// <summary>

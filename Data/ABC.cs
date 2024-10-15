@@ -1,6 +1,5 @@
-using SunamoData._sunamo;
-
 namespace SunamoData.Data;
+using SunamoData._sunamo;
 
 public class ABC : List<AB> //, IList<AB>
 {
@@ -101,7 +100,7 @@ public class ABC : List<AB> //, IList<AB>
     public List<string> OnlyAs()
     {
         var o = new List<string>(Count);
-        CA.InitFillWith(o, Count);
+        //CA.InitFillWith(o, Count);
         for (var i = 0; i < Count; i++) o[i] = this[i].A;
         return o;
     }

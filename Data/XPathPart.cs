@@ -1,6 +1,5 @@
-using SunamoData._sunamo;
-
 namespace SunamoData.Data;
+using SunamoData._sunamo;
 
 public class XPathPart
 {
