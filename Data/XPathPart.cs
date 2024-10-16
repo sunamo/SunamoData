@@ -11,8 +11,8 @@ public class XPathPart
 
     public XPathPart(string part)
     {
-        var dexStartSquareBracket = part.IndexOf(AllChars.rsqb);
-        var dexEndSquareBracket = part.IndexOf(AllChars.lsqb);
+        var dexStartSquareBracket = part.IndexOf(']');
+        var dexEndSquareBracket = part.IndexOf('[');
         if (dexStartSquareBracket != -1 && dexEndSquareBracket != -1)
         {
             tag = part.Substring(0, dexStartSquareBracket);
@@ -20,7 +20,7 @@ public class XPathPart
             if (attr != "")
                 if (attr[0] == '@')
                 {
-                    var nameValue = SHSplit.SplitCharMore(attr.Substring(1), AllChars.qm, AllChars.bs, '=');
+                    var nameValue = SHSplit.SplitCharMore(attr.Substring(1), '"', '\\', '=');
                     if (nameValue.Count == 2)
                         if (nameValue[0] != "")
                         {

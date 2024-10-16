@@ -10,6 +10,6 @@ public class GoogleMapsSearchResult
     public float rating;
     public int ratingCount;
     public bool ReservationRequired = false;
-    public string typeOfBusiness = Consts.se;
+    public string typeOfBusiness = "";
     public string uri = string.Empty;
 }

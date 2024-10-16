@@ -7,7 +7,7 @@ global using System.IO;
 global using System.Threading.Tasks;
 global using System.Data;
 global using SunamoData.Enums;
-global using SunamoData._sunamo.SunamoValues;
+global using SunamoData;
 global using SunamoData._public.SunamoEnums.Enums;
 global using SunamoData._sunamo.SunamoExceptions;
 global using SunamoData._sunamo.SunamoInterfaces.Interfaces;

@@ -15,6 +15,6 @@ public class OTS
 
     public override string ToString()
     {
-        return A + AllStrings.space + B;
+        return A + "" + B;
     }
 }

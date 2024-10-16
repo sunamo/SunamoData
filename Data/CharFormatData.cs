@@ -1,5 +1,6 @@
 namespace SunamoData.Data;
 
+
 /// <summary>
 ///     Udává jak musí být vstupní text zformátovaný
 /// </summary>
@@ -30,9 +31,11 @@ public class CharFormatData
 
     public static CharFormatData GetOnlyNumbers(FromTo requiredLength)
     {
+        LetterAndDigitCharService letterAndDigitChar = new();
+
         var data = new CharFormatData();
         data.fromTo = requiredLength;
-        data.mustBe = AllChars.numericChars.ToArray();
+        data.mustBe = letterAndDigitChar.numericChars.ToArray();
         return data;
     }
 
@@ -51,8 +54,9 @@ public class CharFormatData
 
     public static class Templates
     {
-        public static CharFormatData dash = Get(null, new FromTo(1, 1), AllChars.dash);
-        public static CharFormatData notNumber = Get(null, new FromTo(1, 1), AllChars.notNumber);
+        static char notNumberChar = (char)9;
+        public static CharFormatData dash = Get(null, new FromTo(1, 1), '-');
+        public static CharFormatData notNumber = Get(null, new FromTo(1, 1), notNumberChar);
 
         /// <summary>
         ///     When doesn't contains fixed, is from 0 to number

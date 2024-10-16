@@ -18,7 +18,7 @@ public class SunamoPoint
     public void Parse(string input)
     {
         var d = input.Split(',');
-        //ParserTwoValues.ParseDouble(AllStrings.comma, SHParts.RemoveAfterFirstFunc(input, char.IsLetter, new char[] { AllChars.comma }));
+        //ParserTwoValues.ParseDouble(",", SHParts.RemoveAfterFirstFunc(input, char.IsLetter, new char[] { ',' }));
         X = double.Parse(d[0]);
 
         Y = double.Parse(d[1]);
@@ -26,7 +26,7 @@ public class SunamoPoint
 
     public override string ToString()
     {
-        //return ParserTwoValues.ToString(AllStrings.comma, X.ToString(), Y.ToString());
+        //return ParserTwoValues.ToString(",", X.ToString(), Y.ToString());
         return X + "," + Y;
     }
 }

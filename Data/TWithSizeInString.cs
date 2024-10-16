@@ -7,6 +7,6 @@ public class TWithSizeInString<T>
 
     public override string ToString()
     {
-        return t + " (" + sizeS + AllStrings.rb;
+        return t + " (" + sizeS + ")";
     }
 }
