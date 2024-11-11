@@ -16,3 +16,7 @@ global using System.Reflection;
 global using System.Net;
 global using SunamoData._sunamo;
 global using System.Diagnostics.CodeAnalysis;
+global using SunamoData.Data;
+global using SunamoData.Interfaces;
+global using SunamoData._sunamo.SunamoEnums.Enums;
+global using SunamoData._sunamo.SunamoString.Enums;
