@@ -20,3 +20,7 @@ global using SunamoData.Data;
 global using SunamoData.Interfaces;
 global using SunamoData._sunamo.SunamoEnums.Enums;
 global using SunamoData._sunamo.SunamoString.Enums;
+
+global using ILogger = Microsoft.Extensions.Logging.ILogger;
+global using Microsoft.Extensions.Logging;
+global using NullLogger = Microsoft.Extensions.Logging.Abstractions.NullLogger;

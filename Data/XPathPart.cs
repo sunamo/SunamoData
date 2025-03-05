@@ -1,5 +1,4 @@
 namespace SunamoData.Data;
-using SunamoData._sunamo;
 
 public class XPathPart
 {
@@ -7,8 +6,6 @@ public class XPathPart
     public string attName;
     public string attValue = "";
     public string tag;
-
-
     public XPathPart(string part)
     {
         var dexStartSquareBracket = part.IndexOf(']');
