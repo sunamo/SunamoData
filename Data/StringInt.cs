@@ -1,5 +1,4 @@
 namespace SunamoData.Data;
-using SunamoData._sunamo;
 
 /// <summary>
 /// </summary>

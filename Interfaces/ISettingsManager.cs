@@ -1,5 +1,4 @@
 namespace SunamoData.Interfaces;
-using SunamoData.Data;
 
 public interface ISettingsManager<FrameworkElement, DependencyProperty>
 {
