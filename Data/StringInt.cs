@@ -12,7 +12,7 @@ public class StringInt : Parsing<string, int>
     {
         if (obsah.Contains("|"))
         {
-            var fd = SHSplit.SplitMore(obsah, "|"); //SF.GetAllElementsLine(obsah, null);
+            var fd = SHSplit.Split(obsah, "|"); //SF.GetAllElementsLine(obsah, null);
             t1 = fd[0];
             t2 = int.Parse(fd[1]);
         }

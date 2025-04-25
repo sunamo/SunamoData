@@ -17,7 +17,7 @@ public class XPathPart
             if (attr != "")
                 if (attr[0] == '@')
                 {
-                    var nameValue = SHSplit.SplitCharMore(attr.Substring(1), '"', '\\', '=');
+                    var nameValue = SHSplit.SplitChar(attr.Substring(1), '"', '\\', '=');
                     if (nameValue.Count == 2)
                         if (nameValue[0] != "")
                         {

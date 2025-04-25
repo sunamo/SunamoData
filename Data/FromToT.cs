@@ -64,7 +64,7 @@ public class FromToT<T> : IParser where T : struct
     {
         List<string> v = null;
         if (input.Contains("-"))
-            v = input.Split('-').ToList(); //SHSplit.SplitCharMore(input, new Char[] { '-' });
+            v = input.Split('-').ToList(); //SHSplit.SplitChar(input, new Char[] { '-' });
         else
             v = new List<string>(new[] { input });
         if (v[0] == "0") v[0] = "00:01";
