@@ -5,9 +5,6 @@ public class PhotoFileNameConvention
     public uint? number = null;
     public string text = "";
 
-    public PhotoFileNameConvention(string fnwoe)
-    {
-    }
 
     #region Constanty - začátek názvů souborů fotek které jsou ve konvenci písmeno/a + číslo - všechno musím kontrolovat také na malé
 
