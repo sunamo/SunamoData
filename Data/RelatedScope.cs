@@ -66,7 +66,7 @@ public class RelatedScope
     /// </summary>
     /// <param name="def"></param>
     /// <param name="b"></param>
-    public List<FromTo> RangeFromState(bool def, bool b)
+    public List<FromTo> RangeFromState(bool def)
     {
         var foundedRanges = new List<FromTo>();
         // true - is in code block. false - in non-code block
