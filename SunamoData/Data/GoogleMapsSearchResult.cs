@@ -7,6 +7,7 @@ public class GoogleMapsSearchResult
     public string name = string.Empty;
     public string OpeningHours = string.Empty;
     public string phone = string.Empty;
+    public string phoneNice = string.Empty;
     public float rating;
     public int ratingCount;
     public bool ReservationRequired = false;
