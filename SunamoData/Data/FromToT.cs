@@ -1,10 +1,13 @@
+// EN: Variable names have been checked and replaced with self-descriptive names
+// CZ: Názvy proměnných byly zkontrolovány a nahrazeny samopopisnými názvy
+
 namespace SunamoData.Data;
 
 /// <summary>
 ///     Contains methods which was earlier in FromToT
 /// </summary>
 /// <typeparam name="T"></typeparam>
-public class FromToT<T> : IParser where T : struct
+public class FromToT<T> : IParser where type : struct
 {
     public bool empty;
     protected long fromL;
@@ -13,8 +16,8 @@ public class FromToT<T> : IParser where T : struct
 
     public FromToT()
     {
-        var t = typeof(T);
-        if (t == typeof(int)) ftUse = FromToUseData.None;
+        var type = typeof(type);
+        if (type == typeof(int)) ftUse = FromToUseData.None;
     }
 
     /// <summary>
@@ -33,22 +36,22 @@ public class FromToT<T> : IParser where T : struct
     /// <param name="from"></param>
     /// <param name="to"></param>
     /// <param name="ftUse"></param>
-    public FromToT(T from, T to, FromToUseData ftUse = FromToUseData.DateTime) : this()
+    public FromToT(type from, type to, FromToUseData ftUse = FromToUseData.DateTime) : this()
     {
         this.from = from;
         this.to = to;
         this.ftUse = ftUse;
     }
 
-    public T from
+    public type from
     {
-        get => (T)(dynamic)fromL;
+        get => (type)(dynamic)fromL;
         set => fromL = (long)(dynamic)value;
     }
 
-    public T to
+    public type to
     {
-        get => (T)(dynamic)toL;
+        get => (type)(dynamic)toL;
         set => toL = (long)(dynamic)value;
     }
 

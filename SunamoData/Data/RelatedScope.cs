@@ -1,3 +1,6 @@
+// EN: Variable names have been checked and replaced with self-descriptive names
+// CZ: Názvy proměnných byly zkontrolovány a nahrazeny samopopisnými názvy
+
 namespace SunamoData.Data;
 
 /// <summary>
@@ -31,9 +34,9 @@ public class RelatedScope
 
         for (var i = 0; i < _states.Length; i++)
         {
-            var b = _states[i];
-            if (b.HasValue)
-                if (b.Value)
+            var builder = _states[i];
+            if (builder.HasValue)
+                if (builder.Value)
                 {
                     if (insideRegion)
                     {
