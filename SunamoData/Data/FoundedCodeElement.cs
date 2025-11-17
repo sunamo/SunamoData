@@ -20,7 +20,7 @@ public class FoundedCodeElement : IComparable<FoundedCodeElement>
         From = from;
     }
 
-    public int CompareTo(FoundedCodeElement other)
+    public int CompareTo(FoundedCodeElement? other)
     {
         return 0;
         // todo zakomentováno než budu mít vyřešenou hiarchii v nugetech

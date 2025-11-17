@@ -7,7 +7,7 @@ namespace SunamoData.Data;
 ///     Contains methods which was earlier in FromToT
 /// </summary>
 /// <typeparam name="T"></typeparam>
-public class FromToT<T> : IParser where type : struct
+public class FromToT<T> : IParser where T : struct
 {
     public bool empty;
     protected long fromL;
@@ -16,7 +16,7 @@ public class FromToT<T> : IParser where type : struct
 
     public FromToT()
     {
-        var type = typeof(type);
+        var type = typeof(T);
         if (type == typeof(int)) ftUse = FromToUseData.None;
     }
 
@@ -36,22 +36,22 @@ public class FromToT<T> : IParser where type : struct
     /// <param name="from"></param>
     /// <param name="to"></param>
     /// <param name="ftUse"></param>
-    public FromToT(type from, type to, FromToUseData ftUse = FromToUseData.DateTime) : this()
+    public FromToT(T from, T to, FromToUseData ftUse = FromToUseData.DateTime) : this()
     {
         this.from = from;
         this.to = to;
         this.ftUse = ftUse;
     }
 
-    public type from
+    public T from
     {
-        get => (type)(dynamic)fromL;
+        get => (T)(dynamic)fromL;
         set => fromL = (long)(dynamic)value;
     }
 
-    public type to
+    public T to
     {
-        get => (type)(dynamic)toL;
+        get => (T)(dynamic)toL;
         set => toL = (long)(dynamic)value;
     }
 
@@ -110,7 +110,7 @@ public class FromToT<T> : IParser where type : struct
         return result;
     }
 
-    public string ToString()
+    public override string ToString()
     {
         if (empty) return string.Empty;
 
