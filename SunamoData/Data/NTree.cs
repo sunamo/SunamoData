@@ -1,6 +1,7 @@
+namespace SunamoData.Data;
+
 // EN: Variable names have been checked and replaced with self-descriptive names
 // CZ: Názvy proměnných byly zkontrolovány a nahrazeny samopopisnými názvy
-namespace SunamoData.Data;
 //public delegate void Action<T>(T nodeData);
 
 //public delegate void A();
