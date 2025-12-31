@@ -11,25 +11,25 @@ public delegate void A();
 
 public class NTree<T>
 {
-    public LinkedList<NTree<T>> children;
-    public T data;
+    public LinkedList<NTree<T>> Children;
+    public T Data;
 
     public NTree(T data)
     {
-        this.data = data;
-        children = new LinkedList<NTree<T>>();
+        this.Data = data;
+        Children = new LinkedList<NTree<T>>();
     }
 
     public NTree<T> AddChild(T data)
     {
         var child = new NTree<T>(data);
-        children.AddFirst(child);
+        Children.AddFirst(child);
         return child;
     }
 
     public NTree<T> GetChild(int i)
     {
-        foreach (var n in children)
+        foreach (var n in Children)
             if (--i == 0)
                 return n;
         return null;
@@ -37,8 +37,8 @@ public class NTree<T>
 
     public void Traverse(NTree<T> node, Action<T> visitor)
     {
-        visitor(node.data);
-        foreach (var kid in node.children)
+        visitor(node.Data);
+        foreach (var kid in node.Children)
             Traverse(kid, visitor);
     }
 }

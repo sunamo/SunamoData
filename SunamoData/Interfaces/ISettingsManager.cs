@@ -1,8 +1,8 @@
 namespace SunamoData.Interfaces;
 
-public interface ISettingsManager<FrameworkElement, DependencyProperty>
+public interface ISettingsManager<TFrameworkElement, TDependencyProperty>
 {
-    void AddFromSavedElements(TUList<FrameworkElement, DependencyProperty> list);
-    void LoadSettings(FrameworkElement sender, TUList<FrameworkElement, DependencyProperty> savedElements);
-    void SaveSettings(FrameworkElement sender, TUList<FrameworkElement, DependencyProperty> savedElements);
+    void AddFromSavedElements(TUList<TFrameworkElement, TDependencyProperty> savedElements);
+    void LoadSettings(TFrameworkElement sender, TUList<TFrameworkElement, TDependencyProperty> savedElements);
+    void SaveSettings(TFrameworkElement sender, TUList<TFrameworkElement, TDependencyProperty> savedElements);
 }

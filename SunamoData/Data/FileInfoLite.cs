@@ -5,12 +5,14 @@ public class FileInfoLite
     public string Directory;
 
     /// <summary>
-    ///     Název souboru bez cesty s příponou a sériemi
+    ///     EN: File name without path with extension and series
+    ///     CZ: Název souboru bez cesty s příponou a sériemi
     /// </summary>
     public string Name;
 
     /// <summary>
-    ///     Plná cesta k souboru
+    ///     EN: Full path to file
+    ///     CZ: Plná cesta k souboru
     /// </summary>
     public string Path;
 
@@ -20,30 +22,30 @@ public class FileInfoLite
     {
     }
 
-    public FileInfoLite(string Directory, string FileName, long Length)
+    public FileInfoLite(string directory, string fileName, long length)
     {
-        this.Directory = Directory;
-        Name = FileName;
-        Size = Length;
+        Directory = directory;
+        Name = fileName;
+        Size = length;
     }
 
     public string FileName => Name;
 
     public long Length => Size;
 
-    public static FileInfoLite GetFIL(FileInfo item2)
+    public static FileInfoLite GetFIL(FileInfo fileInfo)
     {
-        var fil = new FileInfoLite();
-        fil.Name = item2.Name;
-        fil.Path = item2.FullName;
-        fil.Directory = item2.DirectoryName;
-        fil.Size = item2.Length;
-        return fil;
+        var result = new FileInfoLite();
+        result.Name = fileInfo.Name;
+        result.Path = fileInfo.FullName;
+        result.Directory = fileInfo.DirectoryName;
+        result.Size = fileInfo.Length;
+        return result;
     }
 
     public static FileInfoLite GetFIL(string file)
     {
-        var item2 = new FileInfo(file);
-        return GetFIL(item2);
+        var fileInfo = new FileInfo(file);
+        return GetFIL(fileInfo);
     }
 }

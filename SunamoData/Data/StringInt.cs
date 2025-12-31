@@ -7,14 +7,14 @@ public class StringInt : Parsing<string, int>
     /// <summary>
     ///     Serializuje na string a int A1
     /// </summary>
-    /// <param name="obsah"></param>
-    public override void ParsujM(string obsah)
+    /// <param name="content"></param>
+    public override void ParsujM(string content)
     {
-        if (obsah.Contains("|"))
+        if (content.Contains("|"))
         {
-            var fd = SHSplit.Split(obsah, "|"); //SF.GetAllElementsLine(obsah, null);
-            t1 = fd[0];
-            t2 = int.Parse(fd[1]);
+            var fd = SHSplit.Split(content, "|"); //SF.GetAllElementsLine(content, null);
+            FirstValue = fd[0];
+            SecondValue = int.Parse(fd[1]);
         }
     }
 }

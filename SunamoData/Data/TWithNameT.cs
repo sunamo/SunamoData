@@ -3,29 +3,30 @@ namespace SunamoData.Data;
 public class TWithNameT<T>
 {
     /// <summary>
-    ///     Just first 5. letters
+    ///     EN: Just first 5 letters
+    ///     CZ: Just first 5. letters
     /// </summary>
-    public string name = string.Empty;
+    public string Name = string.Empty;
 
-    public T t;
+    public T Value;
 
     public TWithNameT()
     {
     }
 
-    public TWithNameT(string name, T t)
+    public TWithNameT(string name, T value)
     {
-        this.name = name;
-        this.t = t;
+        Name = name;
+        Value = value;
     }
 
     public override string ToString()
     {
-        return name;
+        return Name;
     }
 
-    public static TWithNameT<T> Get(string nameCb)
+    public static TWithNameT<T> Get(string name)
     {
-        return new TWithNameT<T> { name = nameCb };
+        return new TWithNameT<T> { Name = name };
     }
 }

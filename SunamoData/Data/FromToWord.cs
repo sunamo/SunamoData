@@ -2,7 +2,7 @@ namespace SunamoData.Data;
 
 public class FromToWord
 {
-    public int from = 0;
-    public int to = 0;
-    public string word = "";
+    public int From = 0;
+    public int To = 0;
+    public string Word = "";
 }

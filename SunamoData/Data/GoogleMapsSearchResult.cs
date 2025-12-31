@@ -2,15 +2,15 @@ namespace SunamoData.Data;
 
 public class GoogleMapsSearchResult
 {
-    public string address = string.Empty;
-    public string mail = string.Empty;
-    public string name = string.Empty;
+    public string Address = string.Empty;
+    public string Mail = string.Empty;
+    public string Name = string.Empty;
     public string OpeningHours = string.Empty;
-    public string phone = string.Empty;
-    public string phoneNice = string.Empty;
-    public float rating;
-    public int ratingCount;
+    public string Phone = string.Empty;
+    public string PhoneNice = string.Empty;
+    public float Rating;
+    public int RatingCount;
     public bool ReservationRequired = false;
-    public string typeOfBusiness = "";
-    public string uri = string.Empty;
+    public string TypeOfBusiness = "";
+    public string Uri = string.Empty;
 }

@@ -1,8 +1,8 @@
 namespace SunamoData.Data;
 
-public class AsyncLoadingBase<T, ProgressBar>
+public class AsyncLoadingBase<T, TProgressBar>
 {
-    public ProgressBar pb;
-    public long processedCount = 0;
-    public Action<T> statusAfterLoad;
+    public TProgressBar ProgressBar;
+    public long ProcessedCount = 0;
+    public Action<T> StatusAfterLoad;
 }

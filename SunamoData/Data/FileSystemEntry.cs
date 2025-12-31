@@ -9,6 +9,6 @@ namespace SunamoData.Data;
 /// </summary>
 public class FileSystemEntry
 {
-    public bool file = false;
-    public string path = "";
+    public bool File = false;
+    public string Path = "";
 }

@@ -2,6 +2,6 @@ namespace SunamoData.Data;
 
 public class ABL<T, U>
 {
-    public List<T> a;
-    public List<T> b;
+    public List<T> First;
+    public List<U> Second;
 }

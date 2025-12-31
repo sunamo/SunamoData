@@ -1,18 +1,19 @@
 namespace SunamoData.Data;
 
 /// <summary>
-///     Implicitly are strings.Empty to avoid cheching data class for null
+///     EN: Implicitly are strings.Empty to avoid checking data class for null
+///     CZ: Implicitly are strings.Empty to avoid cheching data class for null
 /// </summary>
 public class ABS : ABT<string, string>
 {
     public ABS()
     {
-        A = B = string.Empty;
+        Key = Value = string.Empty;
     }
 
-    public ABS(string a, string b)
+    public ABS(string key, string value)
     {
-        A = a;
-        B = b;
+        Key = key;
+        Value = value;
     }
 }

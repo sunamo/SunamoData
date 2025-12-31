@@ -1,10 +1,11 @@
 namespace SunamoData.Data;
 
 /// <summary>
-///     Lze použít na hex vyjádření nebo třeba na barvy bg- a fg- v Metro UI CSS FW
+///     EN: Can be used for hex representation or for bg- and fg- colors in Metro UI CSS FW
+///     CZ: Lze použít na hex vyjádření nebo třeba na barvy bg- a fg- v Metro UI CSS FW
 /// </summary>
 public class FgBgColors
 {
-    public string bg = "";
-    public string fg = "";
+    public string Background = "";
+    public string Foreground = "";
 }

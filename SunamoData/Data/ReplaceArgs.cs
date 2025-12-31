@@ -2,14 +2,14 @@ namespace SunamoData.Data;
 
 public class ReplaceArgs
 {
-    public string initialMessage;
-    public string lblNewValue;
-    public string lblOldValue;
+    public string InitialMessage;
+    public string LblNewValue;
+    public string LblOldValue;
 
     public ReplaceArgs(string initialMessage, string lblOldValue, string lblNewValue)
     {
-        this.initialMessage = initialMessage;
-        this.lblOldValue = lblOldValue;
-        this.lblNewValue = lblNewValue;
+        this.InitialMessage = initialMessage;
+        this.LblOldValue = lblOldValue;
+        this.LblNewValue = lblNewValue;
     }
 }

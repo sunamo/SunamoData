@@ -1,8 +1,8 @@
 namespace SunamoData.Data;
 
 /// <summary>
-///     Must have always entered both from and to
-///     None of event could have unlimited time!
+///     EN: Must have always entered both from and to. None of event could have unlimited time!
+///     CZ: Must have always entered both from and to. None of event could have unlimited time!
 /// </summary>
 public class FromTo : FromToT<long>
 {
@@ -13,25 +13,22 @@ public class FromTo : FromToT<long>
     }
 
     /// <summary>
-    ///     Use Empty contstant outside of class
+    ///     EN: Use Empty constant outside of class
+    ///     CZ: Use Empty contstant outside of class
     /// </summary>
-    /// <param name="empty"></param>
-    private FromTo(bool empty)
+    private FromTo(bool isEmpty)
     {
-        this.empty = empty;
+        IsEmpty = isEmpty;
     }
 
     /// <summary>
-    ///     A3 true = DateTime
-    ///     A3 False = None
+    ///     EN: A3 true = DateTime, A3 False = None
+    ///     CZ: A3 true = DateTime, A3 False = None
     /// </summary>
-    /// <param name="from"></param>
-    /// <param name="to"></param>
-    /// <param name="ftUse"></param>
-    public FromTo(long from, long to, FromToUseData ftUse = FromToUseData.DateTime)
+    public FromTo(long from, long to, FromToUseData fromToUse = FromToUseData.DateTime)
     {
-        this.from = from;
-        this.to = to;
-        this.ftUse = ftUse;
+        From = from;
+        To = to;
+        FromToUse = fromToUse;
     }
 }

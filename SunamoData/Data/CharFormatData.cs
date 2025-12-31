@@ -1,27 +1,29 @@
 namespace SunamoData.Data;
 
 /// <summary>
-///     Udává jak musí být vstupní text zformátovaný
+///     EN: Specifies how the input text must be formatted
+///     CZ: Udává jak musí být vstupní text zformátovaný
 /// </summary>
 public class CharFormatData
 {
-    public FromTo fromTo;
+    public FromTo FromTo;
 
     /// <summary>
-    ///     Nemusí mít žádný prvek, pak může být znak libovolný
+    ///     EN: May have no elements, then the character can be arbitrary
+    ///     CZ: Nemusí mít žádný prvek, pak může být znak libovolný
     /// </summary>
-    public char[] mustBe;
+    public char[] MustBe;
 
     /// <summary>
-    ///     Null = no matter
-    ///     Nejvhodnější je zde výčet Windows.UI.Text.LetterCase
+    ///     EN: Null = no matter. Most suitable is the Windows.UI.Text.LetterCase enum
+    ///     CZ: Null = no matter. Nejvhodnější je zde výčet Windows.UI.Text.LetterCase
     /// </summary>
-    public bool? upper = false;
+    public bool? IsUpper = false;
 
-    public CharFormatData(bool? upper, char[] mustBe)
+    public CharFormatData(bool? isUpper, char[] mustBe)
     {
-        this.upper = upper;
-        this.mustBe = mustBe;
+        IsUpper = isUpper;
+        MustBe = mustBe;
     }
 
     public CharFormatData()
@@ -33,41 +35,40 @@ public class CharFormatData
         LetterAndDigitCharService letterAndDigitChar = new();
 
         var data = new CharFormatData();
-        data.fromTo = requiredLength;
-        data.mustBe = letterAndDigitChar.numericChars.ToArray();
+        data.FromTo = requiredLength;
+        data.MustBe = letterAndDigitChar.NumericChars.ToArray();
         return data;
     }
 
     /// <summary>
-    ///     A1 Null = no matter
+    ///     EN: A1 Null = no matter
+    ///     CZ: A1 Null = no matter
     /// </summary>
-    /// <param name="upper"></param>
-    /// <param name="fromTo"></param>
-    /// <param name="mustBe"></param>
-    public static CharFormatData Get(bool? upper, FromTo fromTo, params char[] mustBe)
+    public static CharFormatData Get(bool? isUpper, FromTo fromTo, params char[] mustBe)
     {
-        var data = new CharFormatData(upper, mustBe);
-        data.fromTo = fromTo;
+        var data = new CharFormatData(isUpper, mustBe);
+        data.FromTo = fromTo;
         return data;
     }
 
     public static class Templates
     {
-        static char notNumberChar = (char)9;
-        public static CharFormatData dash = Get(null, new FromTo(1, 1), '-');
-        public static CharFormatData notNumber = Get(null, new FromTo(1, 1), notNumberChar);
+        static char NotNumberChar = (char)9;
+        public static CharFormatData Dash = Get(null, new FromTo(1, 1), '-');
+        public static CharFormatData NotNumber = Get(null, new FromTo(1, 1), NotNumberChar);
 
         /// <summary>
-        ///     When doesn't contains fixed, is from 0 to number
+        ///     EN: When doesn't contain fixed, is from 0 to number
+        ///     CZ: When doesn't contains fixed, is from 0 to number
         /// </summary>
-        public static CharFormatData twoLetterNumber;
+        public static CharFormatData TwoLetterNumber;
 
         public static CharFormatData Any;
 
         static Templates()
         {
             var requiredLength = new FromTo(1, 2);
-            twoLetterNumber = GetOnlyNumbers(requiredLength);
+            TwoLetterNumber = GetOnlyNumbers(requiredLength);
             Any = Get(null, new FromTo(0, int.MaxValue));
         }
     }

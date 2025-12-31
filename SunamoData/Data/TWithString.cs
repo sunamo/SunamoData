@@ -2,22 +2,22 @@ namespace SunamoData.Data;
 
 public class TWithString<T>
 {
-    public string path;
+    public string Path;
 
-    public T t;
+    public T Value;
 
     public TWithString()
     {
     }
 
-    public TWithString(T t, string path)
+    public TWithString(T value, string path)
     {
-        this.t = t;
-        this.path = path;
+        Value = value;
+        Path = path;
     }
 
     public override string ToString()
     {
-        return path;
+        return Path;
     }
 }

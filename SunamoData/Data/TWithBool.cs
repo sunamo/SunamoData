@@ -2,6 +2,6 @@ namespace SunamoData.Data;
 
 public class TWithBool<T> //: ITWithDt<T>
 {
-    public T t { get; set; } = default;
-    public bool b { get; set; }
+    public T Value { get; set; } = default;
+    public bool Bool { get; set; }
 }

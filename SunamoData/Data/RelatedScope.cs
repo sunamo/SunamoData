@@ -1,7 +1,8 @@
 namespace SunamoData.Data;
 
 /// <summary>
-///     null is neutral(if has before and after same state, is considered as this state)
+///     EN: null is neutral (if has before and after same state, is considered as this state)
+///     CZ: null is neutral(if has before and after same state, is considered as this state)
 /// </summary>
 public class RelatedScope
 {
@@ -39,12 +40,12 @@ public class RelatedScope
                     {
                         if (startIndexes.Contains(i))
                         {
-                            fromTo.from = i;
+                            fromTo.From = i;
                         }
                         else
                         {
                             insideRegion = false;
-                            fromTo.to = i;
+                            fromTo.To = i;
                             foundedRanges.Add(fromTo);
                         }
                     }
@@ -53,7 +54,7 @@ public class RelatedScope
                         insideRegion = true;
 
                         fromTo = new FromTo();
-                        fromTo.from = i;
+                        fromTo.From = i;
                     }
                 }
         }
@@ -66,13 +67,13 @@ public class RelatedScope
     /// </summary>
     /// <param name="def"></param>
     /// <param name="b"></param>
-    public List<FromTo> RangeFromState(bool def)
+    public List<FromTo> RangeFromState(bool defaultValue)
     {
         var foundedRanges = new List<FromTo>();
         // true - is in code block. false - in non-code block
-        var previous = def;
+        var previous = defaultValue;
         var fromTo = new FromTo();
-        fromTo.from = 0;
+        fromTo.From = 0;
 
         for (var i = 0; i < _states.Length; i++)
         {
@@ -86,8 +87,8 @@ public class RelatedScope
                     // ... and actually I'm in comment block
                     if (!previous)
                     {
-                        fromTo.to = i - 1;
-                        if (fromTo.from != fromTo.to) foundedRanges.Add(fromTo);
+                        fromTo.To = i - 1;
+                        if (fromTo.From != fromTo.To) foundedRanges.Add(fromTo);
                         previous = true;
                     }
                 }
@@ -98,7 +99,7 @@ public class RelatedScope
                     if (previous)
                     {
                         fromTo = new FromTo();
-                        fromTo.from = i;
+                        fromTo.From = i;
                         previous = false;
                     }
                 }
@@ -107,8 +108,8 @@ public class RelatedScope
 
         if (!previous)
         {
-            fromTo.to = _states.Length - 1 - 1 + 1;
-            if (fromTo.from != fromTo.to) foundedRanges.Add(fromTo);
+            fromTo.To = _states.Length - 1 - 1 + 1;
+            if (fromTo.From != fromTo.To) foundedRanges.Add(fromTo);
         }
 
         return foundedRanges;

@@ -1,14 +1,14 @@
 namespace SunamoData.Data;
 
-public class ABT<Key, Value>
+public class ABT<TKey, TValue>
 {
-    public Key A;
-    public Value B;
+    public TKey Key;
+    public TValue Value;
 
-    public ABT(Key a, Value b)
+    public ABT(TKey key, TValue value)
     {
-        A = a;
-        B = b;
+        Key = key;
+        Value = value;
     }
 
     public ABT()

@@ -1,107 +1,103 @@
 namespace SunamoData.Data;
 
 /// <summary>
-///     Contains methods which was earlier in FromToT
+///     EN: Contains methods which were earlier in FromToT
+///     CZ: Contains methods which was earlier in FromToT
 /// </summary>
-/// <typeparam name="T"></typeparam>
 public class FromToT<T> : IParser where T : struct
 {
-    public bool empty;
-    protected long fromL;
-    public FromToUseData ftUse = FromToUseData.DateTime;
-    protected long toL;
+    public bool IsEmpty;
+    protected long fromLong;
+    public FromToUseData FromToUse = FromToUseData.DateTime;
+    protected long toLong;
 
     public FromToT()
     {
         var type = typeof(T);
-        if (type == typeof(int)) ftUse = FromToUseData.None;
+        if (type == typeof(int)) FromToUse = FromToUseData.None;
     }
 
     /// <summary>
-    ///     Use Empty contstant outside of class
+    ///     EN: Use Empty constant outside of class
+    ///     CZ: Use Empty contstant outside of class
     /// </summary>
-    /// <param name="empty"></param>
-    private FromToT(bool empty) : this()
+    private FromToT(bool isEmpty) : this()
     {
-        this.empty = empty;
+        IsEmpty = isEmpty;
     }
 
     /// <summary>
-    ///     A3 true = DateTime
-    ///     A3 False = None
+    ///     EN: A3 true = DateTime, A3 False = None
+    ///     CZ: A3 true = DateTime, A3 False = None
     /// </summary>
-    /// <param name="from"></param>
-    /// <param name="to"></param>
-    /// <param name="ftUse"></param>
-    public FromToT(T from, T to, FromToUseData ftUse = FromToUseData.DateTime) : this()
+    public FromToT(T from, T to, FromToUseData fromToUse = FromToUseData.DateTime) : this()
     {
-        this.from = from;
-        this.to = to;
-        this.ftUse = ftUse;
+        From = from;
+        To = to;
+        FromToUse = fromToUse;
     }
 
-    public T from
+    public T From
     {
-        get => (T)(dynamic)fromL;
-        set => fromL = (long)(dynamic)value;
+        get => (T)(dynamic)fromLong;
+        set => fromLong = (long)(dynamic)value;
     }
 
-    public T to
+    public T To
     {
-        get => (T)(dynamic)toL;
-        set => toL = (long)(dynamic)value;
+        get => (T)(dynamic)toLong;
+        set => toLong = (long)(dynamic)value;
     }
 
-    public long FromL => fromL;
-    public long ToL => toL;
+    public long FromLong => fromLong;
+    public long ToLong => toLong;
 
 
     /// <summary>
-    ///     After it could be called IsFilledWithData
+    ///     EN: After it can be called IsFilledWithData
+    ///     CZ: After it could be called IsFilledWithData
     /// </summary>
-    /// <param name="input"></param>
-    public void Parse(string input)
+    public void Parse(string text)
     {
-        List<string> v = null;
-        if (input.Contains("-"))
-            v = input.Split('-').ToList(); //SHSplit.SplitChar(input, new Char[] { '-' });
+        List<string> parts = null;
+        if (text.Contains("-"))
+            parts = text.Split('-').ToList(); //SHSplit.SplitChar(text, new Char[] { '-' });
         else
-            v = new List<string>(new[] { input });
-        if (v[0] == "0") v[0] = "00:01";
-        if (v[1] == "24") v[1] = "23:59";
-        var v0 = (long)ReturnSecondsFromTimeFormat(v[0]);
-        fromL = v0;
-        if (v.Count > 1)
+            parts = new List<string>(new[] { text });
+        if (parts[0] == "0") parts[0] = "00:01";
+        if (parts[1] == "24") parts[1] = "23:59";
+        var fromSeconds = (long)ReturnSecondsFromTimeFormat(parts[0]);
+        fromLong = fromSeconds;
+        if (parts.Count > 1)
         {
-            var v1 = (long)ReturnSecondsFromTimeFormat(v[1]);
-            toL = v1;
+            var toSeconds = (long)ReturnSecondsFromTimeFormat(parts[1]);
+            toLong = toSeconds;
         }
     }
 
     public bool IsFilledWithData()
     {
-        //from != 0 && - cant be, if entered 0-24 fails
-        return toL >= 0 && toL != 0;
+        //From != 0 && - cant be, if entered 0-24 fails
+        return toLong >= 0 && toLong != 0;
     }
 
     /// <summary>
-    ///     Use DTHelperCs.ToShortTimeFromSeconds to convert back
+    ///     EN: Use DTHelperCs.ToShortTimeFromSeconds to convert back
+    ///     CZ: Use DTHelperCs.ToShortTimeFromSeconds to convert back
     /// </summary>
-    /// <param name="v"></param>
-    /// <returns></returns>
-    private int ReturnSecondsFromTimeFormat(string v)
+    private int ReturnSecondsFromTimeFormat(string text)
     {
         var result = 0;
-        if (v.Contains(":"))
+        if (text.Contains(":"))
         {
-            var parts = v.Split(':').ToList()
-                .ConvertAll(d => int.Parse(d)); //SHSplit.SplitToIntList(v, new String[] { ":" });
-            result += parts[0] * (int)DTConstants.secondsInHour;
-            if (parts.Count > 1) result += parts[1] * (int)DTConstants.secondsInMinute;
+            var parts = text.Split(':').ToList()
+                .ConvertAll(element => int.Parse(element)); //SHSplit.SplitToIntList(text, new String[] { ":" });
+            result += parts[0] * (int)DTConstants.SecondsInHour;
+            if (parts.Count > 1) result += parts[1] * (int)DTConstants.SecondsInMinute;
         }
         else
         {
-            if (int.TryParse(v, out var _)) result += int.Parse(v) * (int)DTConstants.secondsInHour;
+            if (int.TryParse(text, out var _)) result += int.Parse(text) * (int)DTConstants.SecondsInHour;
         }
 
         return result;
@@ -109,20 +105,20 @@ public class FromToT<T> : IParser where T : struct
 
     public override string ToString()
     {
-        if (empty) return string.Empty;
+        if (IsEmpty) return string.Empty;
 
-        if (new List<FromToUseData>([FromToUseData.DateTime, FromToUseData.Unix, FromToUseData.UnixJustTime]).Any(d =>
-            d == ftUse))
+        if (new List<FromToUseData>([FromToUseData.DateTime, FromToUseData.Unix, FromToUseData.UnixJustTime]).Any(element =>
+            element == FromToUse))
         {
             return ToStringDateTime();
         }
-        else if (ftUse == FromToUseData.None)
+        else if (FromToUse == FromToUseData.None)
         {
-            return from + "-" + to;
+            return From + "-" + To;
         }
         else
         {
-            ThrowEx.NotImplementedCase(ftUse);
+            ThrowEx.NotImplementedCase(FromToUse);
             return string.Empty;
         }
     }

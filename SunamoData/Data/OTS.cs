@@ -2,19 +2,19 @@ namespace SunamoData.Data;
 
 public class OTS
 {
-    public object A;
-    public object B;
+    public object First;
+    public object Second;
 
-    public static OTS Get(object a, object b)
+    public static OTS Get(object first, object second)
     {
-        var ots = new OTS();
-        ots.A = a;
-        ots.B = b;
-        return ots;
+        var result = new OTS();
+        result.First = first;
+        result.Second = second;
+        return result;
     }
 
     public override string ToString()
     {
-        return A + "" + B;
+        return First + "" + Second;
     }
 }

@@ -2,30 +2,28 @@ namespace SunamoData.Data;
 
 public class AB
 {
-    public static Type type = typeof(AB);
-    public string A;
-    public object B;
+    public static Type Type = typeof(AB);
+    public string Key;
+    public object Value;
 
-    public AB(string a, object b)
+    public AB(string key, object value)
     {
-        A = a;
-        B = b;
+        Key = key;
+        Value = value;
     }
 
-    public static AB Get(Type a, object b)
+    public static AB Get(Type type, object value)
     {
-        return new AB(a.FullName, b);
+        return new AB(type.FullName, value);
     }
 
-    /// <param name="a"></param>
-    /// <param name="b"></param>
-    public static AB Get(string a, object b)
+    public static AB Get(string key, object value)
     {
-        return new AB(a, b);
+        return new AB(key, value);
     }
 
     public override string ToString()
     {
-        return A + ":" + B;
+        return Key + ":" + Value;
     }
 }

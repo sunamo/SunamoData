@@ -16,46 +16,46 @@ public class ABC : List<AB> //, IList<AB>
     public ABC(params object[] setsNameValue)
     {
         if (setsNameValue.Length == 0) return;
-        var o = setsNameValue[0];
-        var temp = o.GetType();
-        var t2 = temp;
-        if (o is IList)
+        var firstElement = setsNameValue[0];
+        var elementType = firstElement.GetType();
+        var actualType = elementType;
+        if (firstElement is IList)
         {
-            var text = o as IList;
-            var o2 = text.Count != 0 ? text[0] : null;
-            t2 = o2.GetType();
+            var list = firstElement as IList;
+            var firstListElement = list.Count != 0 ? list[0] : null;
+            actualType = firstListElement.GetType();
         }
 
-        //var t2 = setsNameValue[0][0].GetType();
-        if (t2 == typeof(AB))
+        //var actualType = setsNameValue[0][0].GetType();
+        if (actualType == typeof(AB))
         {
-            //var abc = null;
+            //var collection = null;
             //if (true)
             //{
             //}
             for (var i = 0; i < setsNameValue.Length; i++)
             {
-                var snv = setsNameValue[i];
-                t2 = snv.GetType();
-                if (t2 == AB.type)
+                var currentElement = setsNameValue[i];
+                actualType = currentElement.GetType();
+                if (actualType == AB.Type)
                 {
-                    Add((AB)snv);
+                    Add((AB)currentElement);
                 }
                 else
                 {
-                    var ie = (IList)snv;
-                    foreach (var item in ie)
+                    var enumerable = (IList)currentElement;
+                    foreach (var item in enumerable)
                     {
-                        var ab = (AB)item;
-                        Add(ab);
+                        var abElement = (AB)item;
+                        Add(abElement);
                     }
                 }
             }
         }
-        else if (temp == typeof(ABC))
+        else if (elementType == typeof(ABC))
         {
-            var abc = (ABC)o;
-            AddRange(abc);
+            var collection = (ABC)firstElement;
+            AddRange(collection);
         }
         else
         {
@@ -91,21 +91,21 @@ public class ABC : List<AB> //, IList<AB>
 
     public List<object> OnlyBsList()
     {
-        var o = new List<object>(Count);
-        for (var i = 0; i < Count; i++) o.Add(this[i].B);
-        return o;
+        var result = new List<object>(Count);
+        for (var i = 0; i < Count; i++) result.Add(this[i].Value);
+        return result;
     }
 
     public List<string> OnlyAs()
     {
-        var o = new List<string>(Count);
-        //CA.InitFillWith(o, Count);
-        for (var i = 0; i < Count; i++) o[i] = this[i].A;
-        return o;
+        var result = new List<string>(Count);
+        //CA.InitFillWith(result, Count);
+        for (var i = 0; i < Count; i++) result[i] = this[i].Key;
+        return result;
     }
 
-    public static List<object> OnlyBs(List<AB> arr)
+    public static List<object> OnlyBs(List<AB> list)
     {
-        return arr.Select(d => d.B).ToList();
+        return list.Select(element => element.Value).ToList();
     }
 }

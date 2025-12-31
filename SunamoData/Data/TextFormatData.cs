@@ -10,21 +10,21 @@ public class TextFormatData : List<CharFormatData>
     ///     Přesná požadovaná délka, nesmí být ani menší, ani větší
     ///     Pokud je -1, text může mít jakoukoliv délku
     /// </summary>
-    public int requiredLength = -1;
+    public int RequiredLength = -1;
 
-    public bool trimBefore;
+    public bool TrimBefore;
 
     /// <summary>
     ///     Zadej do A2 -1 pokud text může mít jakoukoliv délku
     /// </summary>
     /// <param name="trimBefore"></param>
     /// <param name="requiredLength"></param>
-    /// <param name="a"></param>
-    public TextFormatData(bool trimBefore, int requiredLength, params CharFormatData[] a)
+    /// <param name="formatDataItems"></param>
+    public TextFormatData(bool trimBefore, int requiredLength, params CharFormatData[] formatDataItems)
     {
-        this.trimBefore = trimBefore;
-        this.requiredLength = requiredLength;
-        AddRange(a);
+        this.TrimBefore = trimBefore;
+        this.RequiredLength = requiredLength;
+        AddRange(formatDataItems);
     }
 
     public static class Templates

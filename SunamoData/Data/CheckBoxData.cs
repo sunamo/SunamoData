@@ -3,12 +3,14 @@ namespace SunamoData.Data;
 public class CheckBoxData<T>
 {
     /// <summary>
-    ///     Na to co se má zobrazit
+    ///     EN: What should be displayed
+    ///     CZ: Na to co se má zobrazit
     /// </summary>
-    public T t = default;
+    public T Value = default;
 
     /// <summary>
-    ///     Set to IsChecked when TwoWayTable.DataCellWrapper == AddBeforeControl.CheckBox
+    ///     EN: Set to IsChecked when TwoWayTable.DataCellWrapper == AddBeforeControl.CheckBox
+    ///     CZ: Set to IsChecked when TwoWayTable.DataCellWrapper == AddBeforeControl.CheckBox
     /// </summary>
-    public bool? tick = false;
+    public bool? IsChecked = false;
 }

@@ -3,15 +3,15 @@ namespace SunamoData.Data;
 public class StateMessage
 {
     protected string message;
-    protected string mt = "Information";
+    protected string messageType = "Information";
 
-    public StateMessage(string mt, string message)
+    public StateMessage(string messageType, string message)
     {
-        this.mt = mt;
+        this.messageType = messageType;
         this.message = message;
     }
 
-    public string TypeOfMessage => mt;
+    public string TypeOfMessage => messageType;
 
     public string TextMessage => message;
 }

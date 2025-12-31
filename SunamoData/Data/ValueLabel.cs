@@ -4,13 +4,13 @@ public class ValueLabel
 {
     public ValueLabel(string value, string label)
     {
-        this.value = value;
-        this.label = label;
+        this.Value = value;
+        this.Label = label;
     }
 
-    public string value { get; set; }
+    public string Value { get; set; }
 
-    public string label { get; set; }
+    public string Label { get; set; }
 
     /// <summary>
     ///     Ginstantion O AB

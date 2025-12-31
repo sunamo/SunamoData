@@ -19,23 +19,23 @@ public class FileInfoSerie : FileInfoLite
     public static FileInfoSerie GetFIS(string file,
         Func<string, bool, SerieStyleData, (string, bool)> GetNameWithoutSeriesNoOut)
     {
-        var item2 = new FileInfo(file);
-        return GetFIS(item2, GetNameWithoutSeriesNoOut);
+        var fileInfo = new FileInfo(file);
+        return GetFIS(fileInfo, GetNameWithoutSeriesNoOut);
     }
 
-    public static FileInfoSerie GetFIS(FileInfo item2,
+    public static FileInfoSerie GetFIS(FileInfo fileInfo,
         Func<string, bool, SerieStyleData, (string, bool)> GetNameWithoutSeriesNoOut)
     {
         var fil = new FileInfoSerie();
-        fil.Name = item2.Name;
-        fil.Path = item2.FullName;
-        fil.Size = item2.Length;
+        fil.Name = fileInfo.Name;
+        fil.Path = fileInfo.FullName;
+        fil.Size = fileInfo.Length;
         var (name, hasSerieName) = GetNameWithoutSeriesNoOut(fil.Name, false, SerieStyleData.Brackets);
         var (path, hasSeriePath) = GetNameWithoutSeriesNoOut(fil.Name, false, SerieStyleData.Brackets);
         fil.NameWithoutSeries = name;
         fil.PathWithoutSerie = path;
         fil.HasSerie = hasSeriePath;
-        fil.FileNameComplet = System.IO.Path.GetFileName(item2.FullName);
+        fil.FileNameComplet = System.IO.Path.GetFileName(fileInfo.FullName);
         return fil;
     }
 }

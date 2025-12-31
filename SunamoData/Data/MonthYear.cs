@@ -2,6 +2,6 @@ namespace SunamoData.Data;
 
 public class MonthYear
 {
-    public int month = 0;
-    public int year = 0;
+    public int Month = 0;
+    public int Year = 0;
 }

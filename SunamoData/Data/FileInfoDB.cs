@@ -1,27 +1,24 @@
 namespace SunamoData.Data;
 
 /// <summary>
-///     Used for example in HostingManager
+///     EN: Used for example in HostingManager
+///     CZ: Used for example in HostingManager
 /// </summary>
 public class FileInfoDB : FileInfoLite
 {
-    public int ID = -1;
+    public int Id = -1;
 
-    public FileInfoDB(int ID, string Directory, string FileName, long Length) : base(Directory, FileName, Length)
+    public FileInfoDB(int id, string directory, string fileName, long length) : base(directory, fileName, length)
     {
-        this.ID = ID;
+        Id = id;
     }
 
     /// <summary>
-    ///     Když chci jakoby použít pouze FileInfo, ale mít typ FileInfoDB
+    ///     EN: When I want to use only FileInfo, but have FileInfoDB type
+    ///     CZ: Když chci jakoby použít pouze FileInfo, ale mít typ FileInfoDB
     /// </summary>
-    /// <param name="ID"></param>
-    /// <param name="Directory"></param>
-    /// <param name="FileName"></param>
-    /// <param name="Length"></param>
-    /// <param name="Hash"></param>
-    public FileInfoDB(string Directory, string FileName, long Length)
-        : base(Directory, FileName, Length)
+    public FileInfoDB(string directory, string fileName, long length)
+        : base(directory, fileName, length)
     {
     }
 

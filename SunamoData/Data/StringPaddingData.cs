@@ -5,46 +5,46 @@ public class StringPaddingData
     /// <summary>
     ///     [0]
     /// </summary>
-    public bool first = false;
+    public bool First = false;
 
     /// <summary>
     ///     [0]
     /// </summary>
-    public char firstChar = 'a';
+    public char FirstChar = 'a';
 
     /// <summary>
     ///     [Length-1] (really last / poslední)
     /// </summary>
-    public bool last = false;
+    public bool Last = false;
 
     /// <summary>
     ///     [Length-1] (really last / poslední)
     /// </summary>
-    public char lastChar = 'a';
+    public char LastChar = 'a';
 
-    public string text = null;
+    public string Text = null;
 
     #region for cases like "xxx: "
 
     /// <summary>
     ///     [1]
     /// </summary>
-    public bool first2 = false;
+    public bool First2 = false;
 
     /// <summary>
     ///     [Length-2] (penultimate / předposlední)
     /// </summary>
-    public bool last2 = false;
+    public bool Last2 = false;
 
     /// <summary>
     ///     [1]
     /// </summary>
-    public char firstChar2 = 'a';
+    public char FirstChar2 = 'a';
 
     /// <summary>
     ///     [Length-2] (penultimate / předposlední)
     /// </summary>
-    public char lastChar2 = 'a';
+    public char LastChar2 = 'a';
 
     #endregion
 }

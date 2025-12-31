@@ -6,7 +6,7 @@ namespace SunamoData.Data;
 /// <typeparam name="T2"></typeparam>
 public abstract class Parsing<T1, T2>
 {
-    public T1 t1 = default;
-    public T2 t2 = default;
-    public abstract void ParsujM(string obsah);
+    public T1 FirstValue = default;
+    public T2 SecondValue = default;
+    public abstract void ParsujM(string content);
 }
