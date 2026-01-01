@@ -1,16 +1,29 @@
 namespace SunamoData.Data;
 
 /// <summary>
-///     EN: Contains methods which were earlier in FromToT
-///     CZ: Contains methods which was earlier in FromToT
+/// Generic range type with start and end values of type T.
+/// Contains parsing and formatting methods for time ranges.
 /// </summary>
+/// <typeparam name="T">The struct type for the range values.</typeparam>
 public class FromToT<T> : IParser where T : struct
 {
-    public bool IsEmpty;
-    protected long fromLong;
-    public FromToUseData FromToUse = FromToUseData.DateTime;
-    protected long toLong;
+    /// <summary>
+    /// Gets or sets whether this instance is empty.
+    /// </summary>
+    public bool IsEmpty { get; set; }
 
+    private long fromLong;
+
+    /// <summary>
+    /// Gets or sets how to interpret the range values (DateTime, Unix time, or None).
+    /// </summary>
+    public FromToUseData FromToUse { get; set; } = FromToUseData.DateTime;
+
+    private long toLong;
+
+    /// <summary>
+    /// Initializes a new instance of the <see cref="FromToT{T}"/> class.
+    /// </summary>
     public FromToT()
     {
         var type = typeof(T);
@@ -18,18 +31,20 @@ public class FromToT<T> : IParser where T : struct
     }
 
     /// <summary>
-    ///     EN: Use Empty constant outside of class
-    ///     CZ: Use Empty contstant outside of class
+    /// Initializes a new instance with empty state. Use Empty constant outside of class.
     /// </summary>
+    /// <param name="isEmpty">Whether this instance is empty.</param>
     private FromToT(bool isEmpty) : this()
     {
         IsEmpty = isEmpty;
     }
 
     /// <summary>
-    ///     EN: A3 true = DateTime, A3 False = None
-    ///     CZ: A3 true = DateTime, A3 False = None
+    /// Initializes a new instance with the specified range values.
     /// </summary>
+    /// <param name="from">The start value of the range.</param>
+    /// <param name="to">The end value of the range.</param>
+    /// <param name="fromToUse">How to interpret the values (DateTime for date/time, None for plain numbers).</param>
     public FromToT(T from, T to, FromToUseData fromToUse = FromToUseData.DateTime) : this()
     {
         From = from;
@@ -37,29 +52,43 @@ public class FromToT<T> : IParser where T : struct
         FromToUse = fromToUse;
     }
 
+    /// <summary>
+    /// Gets or sets the start value of the range.
+    /// </summary>
     public T From
     {
         get => (T)(dynamic)fromLong;
         set => fromLong = (long)(dynamic)value;
     }
 
+    /// <summary>
+    /// Gets or sets the end value of the range.
+    /// </summary>
     public T To
     {
         get => (T)(dynamic)toLong;
         set => toLong = (long)(dynamic)value;
     }
 
+    /// <summary>
+    /// Gets the start value as a long integer.
+    /// </summary>
     public long FromLong => fromLong;
+
+    /// <summary>
+    /// Gets the end value as a long integer.
+    /// </summary>
     public long ToLong => toLong;
 
 
     /// <summary>
-    ///     EN: After it can be called IsFilledWithData
-    ///     CZ: After it could be called IsFilledWithData
+    /// Parses a time range string in format "HH:mm-HH:mm" or "HH:mm".
+    /// After parsing, IsFilledWithData can be called to check if data was successfully parsed.
     /// </summary>
+    /// <param name="text">The time range string to parse.</param>
     public void Parse(string text)
     {
-        List<string> parts = null;
+        List<string> parts = null!;
         if (text.Contains("-"))
             parts = text.Split('-').ToList(); //SHSplit.SplitChar(text, new Char[] { '-' });
         else
@@ -75,6 +104,10 @@ public class FromToT<T> : IParser where T : struct
         }
     }
 
+    /// <summary>
+    /// Checks whether this instance contains valid parsed data.
+    /// </summary>
+    /// <returns>True if the instance has valid data, false otherwise.</returns>
     public bool IsFilledWithData()
     {
         //From != 0 && - cant be, if entered 0-24 fails
@@ -82,9 +115,11 @@ public class FromToT<T> : IParser where T : struct
     }
 
     /// <summary>
-    ///     EN: Use DTHelperCs.ToShortTimeFromSeconds to convert back
-    ///     CZ: Use DTHelperCs.ToShortTimeFromSeconds to convert back
+    /// Converts time format string (HH:mm or HH) to seconds.
+    /// Use DTHelperCs.ToShortTimeFromSeconds to convert back.
     /// </summary>
+    /// <param name="text">The time string to convert.</param>
+    /// <returns>The number of seconds.</returns>
     private int ReturnSecondsFromTimeFormat(string text)
     {
         var result = 0;
@@ -103,6 +138,10 @@ public class FromToT<T> : IParser where T : struct
         return result;
     }
 
+    /// <summary>
+    /// Returns a string representation of this range based on the FromToUse setting.
+    /// </summary>
+    /// <returns>A string representation of the range.</returns>
     public override string ToString()
     {
         if (IsEmpty) return string.Empty;
@@ -123,6 +162,11 @@ public class FromToT<T> : IParser where T : struct
         }
     }
 
+    /// <summary>
+    /// Converts this range to a DateTime string representation.
+    /// Override this method in derived classes to provide custom formatting.
+    /// </summary>
+    /// <returns>A DateTime string representation.</returns>
     protected virtual string ToStringDateTime()
     {
         return "";

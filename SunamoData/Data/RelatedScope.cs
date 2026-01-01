@@ -8,11 +8,19 @@ public class RelatedScope
 {
     private readonly bool?[] _states;
 
+    /// <summary>
+    /// Initializes a new instance of the <see cref="RelatedScope"/> class with the specified array size.
+    /// </summary>
+    /// <param name="arraySize">The size of the internal state array.</param>
     public RelatedScope(int arraySize)
     {
         _states = new bool?[arraySize];
     }
 
+    /// <summary>
+    /// Initializes a new instance of the <see cref="RelatedScope"/> class with the specified states.
+    /// </summary>
+    /// <param name="states">The initial states array.</param>
     public RelatedScope(bool?[] states)
     {
         _states = states;
@@ -21,8 +29,7 @@ public class RelatedScope
     /// <summary>
     ///     Is used for deleting regions blocks. All lines between must dont exists or be empty
     /// </summary>
-    /// <param name="def"></param>
-    /// <param name="b"></param>
+    /// <param name="startIndexes">The list of start indexes to check.</param>
     public List<FromTo> RangeFromStateSimple(List<int> startIndexes)
     {
         var foundedRanges = new List<FromTo>();
@@ -63,10 +70,10 @@ public class RelatedScope
     }
 
     /// <summary>
-    ///     Was used for deleting comments. Returns serie only when is all lines between is comments
+    /// Returns ranges where all lines between have a specific state. Was used for deleting comments.
     /// </summary>
-    /// <param name="def"></param>
-    /// <param name="b"></param>
+    /// <param name="defaultValue">The default state value to start with.</param>
+    /// <returns>A list of ranges matching the criteria.</returns>
     public List<FromTo> RangeFromState(bool defaultValue)
     {
         var foundedRanges = new List<FromTo>();

@@ -1,16 +1,22 @@
 namespace SunamoData.Data;
 
+/// <summary>
+/// Represents a folder entry with its relative path.
+/// </summary>
 public class FolderEntry
 {
-    public string RelativePath;
+    /// <summary>
+    /// Gets or sets the relative path of the folder.
+    /// This is actually a relative full path, so that by simply getting the parent node and root, the entire path can be obtained.
+    /// </summary>
+    public string RelativePath { get; set; }
 
     /// <summary>
-    ///     A1 je skutečně relativní plná cesta, abych snadno mohl získat pouze získáním naduzlu a rootu celou cestu
+    /// Initializes a new instance of the <see cref="FolderEntry"/> class.
     /// </summary>
-    /// <param name="ID"></param>
-    /// <param name="DirectoryName"></param>
-    public FolderEntry(string RelativePath)
+    /// <param name="relativePath">The relative path of the folder.</param>
+    public FolderEntry(string relativePath)
     {
-        this.RelativePath = RelativePath;
+        this.RelativePath = relativePath;
     }
 }

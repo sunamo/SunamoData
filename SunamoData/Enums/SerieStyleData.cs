@@ -21,5 +21,9 @@ public enum SerieStyleData
     ///     abc_001_01.txt.txt
     /// </summary>
     Underscore,
+
+    /// <summary>
+    /// All serie styles combined.
+    /// </summary>
     All
 }

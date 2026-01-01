@@ -1,9 +1,17 @@
-// EN: Variable names have been checked and replaced with self-descriptive names
-// CZ: Názvy proměnných byly zkontrolovány a nahrazeny samopopisnými názvy
 namespace SunamoData.Data;
 
+/// <summary>
+/// Represents a string with both its normal and sanitized versions.
+/// </summary>
 public class SanitizedString
 {
-    public string Normal { get; set; }
-    public string Sanitized { get; set; }
+    /// <summary>
+    /// Gets or sets the normal (original) string.
+    /// </summary>
+    public string Normal { get; set; } = string.Empty;
+
+    /// <summary>
+    /// Gets or sets the sanitized (cleaned/escaped) version of the string.
+    /// </summary>
+    public string Sanitized { get; set; } = string.Empty;
 }

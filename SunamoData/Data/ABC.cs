@@ -1,18 +1,36 @@
 namespace SunamoData.Data;
 
-public class ABC : List<AB> //, IList<AB>
+/// <summary>
+/// Represents a collection of AB (key-value pair) items.
+/// </summary>
+public class ABC : List<AB>
 {
-    public static ABC Empty = new();
+    /// <summary>
+    /// Gets an empty ABC instance.
+    /// </summary>
+    public static ABC Empty { get; } = new();
 
+    /// <summary>
+    /// Initializes a new instance of the <see cref="ABC"/> class.
+    /// </summary>
     public ABC()
     {
     }
 
+    /// <summary>
+    /// Initializes a new instance of the <see cref="ABC"/> class with the specified capacity filled with null values.
+    /// </summary>
+    /// <param name="capacity">The number of null elements to pre-allocate.</param>
     public ABC(int capacity) : base(capacity)
     {
-        for (var i = 0; i < capacity; i++) Add(null);
+        for (var i = 0; i < capacity; i++) Add(null!);
     }
 
+    /// <summary>
+    /// Initializes a new instance of the <see cref="ABC"/> class from various input types.
+    /// Supports AB objects, ABC collections, or name-value pairs.
+    /// </summary>
+    /// <param name="setsNameValue">Variable number of parameters that can be AB objects, ABC collections, or alternating name-value pairs.</param>
     public ABC(params object[] setsNameValue)
     {
         if (setsNameValue.Length == 0) return;
@@ -22,17 +40,12 @@ public class ABC : List<AB> //, IList<AB>
         if (firstElement is IList)
         {
             var list = firstElement as IList;
-            var firstListElement = list.Count != 0 ? list[0] : null;
-            actualType = firstListElement.GetType();
+            var firstListElement = (list != null && list.Count != 0) ? list[0] : null;
+            actualType = firstListElement?.GetType() ?? actualType;
         }
 
-        //var actualType = setsNameValue[0][0].GetType();
         if (actualType == typeof(AB))
         {
-            //var collection = null;
-            //if (true)
-            //{
-            //}
             for (var i = 0; i < setsNameValue.Length; i++)
             {
                 var currentElement = setsNameValue[i];
@@ -43,8 +56,8 @@ public class ABC : List<AB> //, IList<AB>
                 }
                 else
                 {
-                    var enumerable = (IList)currentElement;
-                    foreach (var item in enumerable)
+                    var list = (IList)currentElement;
+                    foreach (var item in list)
                     {
                         var abElement = (AB)item;
                         Add(abElement);
@@ -59,20 +72,28 @@ public class ABC : List<AB> //, IList<AB>
         }
         else
         {
-            // Dont use like idiot TwoDimensionParamsIntoOne where is not needed - just iterate. Must more use radio and less blindness
-            //var setsNameValue = CA.TwoDimensionParamsIntoOne(setsNameValue2);
-            for (var i = 0; i < setsNameValue.Length; i++) Add(AB.Get(setsNameValue[i].ToString(), setsNameValue[++i]));
+            for (var i = 0; i < setsNameValue.Length; i++) Add(AB.Get(setsNameValue[i]?.ToString() ?? string.Empty, setsNameValue[++i]));
         }
     }
 
+    /// <summary>
+    /// Initializes a new instance of the <see cref="ABC"/> class from an array of AB objects.
+    /// </summary>
+    /// <param name="abc">Array of AB objects to add to the collection.</param>
     public ABC(params AB[] abc)
     {
-        // TODO: Complete member initialization
         AddRange(abc);
     }
 
+    /// <summary>
+    /// Gets the number of elements in the collection.
+    /// </summary>
     public int Length => Count;
 
+    /// <summary>
+    /// Returns a string representation of all elements in comma-separated format.
+    /// </summary>
+    /// <returns>A string containing all elements separated by commas.</returns>
     public override string ToString()
     {
         var stringBuilder = new StringBuilder();
@@ -81,14 +102,20 @@ public class ABC : List<AB> //, IList<AB>
     }
 
     /// <summary>
-    ///     Must be [] due to SQL viz
-    ///     https://stackoverflow.com/questions/9149919/no-mapping-exists-from-object-type-system-collections-generic-list-when-executin
+    /// Returns an array containing only the values (B part) from all AB pairs.
+    /// Must be an array due to SQL requirements.
+    /// See: https://stackoverflow.com/questions/9149919/no-mapping-exists-from-object-type-system-collections-generic-list-when-executin
     /// </summary>
+    /// <returns>An object array containing all values.</returns>
     public object[] OnlyBs()
     {
         return OnlyBsList().ToArray();
     }
 
+    /// <summary>
+    /// Returns a list containing only the values (B part) from all AB pairs.
+    /// </summary>
+    /// <returns>A list of objects containing all values.</returns>
     public List<object> OnlyBsList()
     {
         var result = new List<object>(Count);
@@ -96,14 +123,22 @@ public class ABC : List<AB> //, IList<AB>
         return result;
     }
 
+    /// <summary>
+    /// Returns a list containing only the keys (A part) from all AB pairs.
+    /// </summary>
+    /// <returns>A list of strings containing all keys.</returns>
     public List<string> OnlyAs()
     {
         var result = new List<string>(Count);
-        //CA.InitFillWith(result, Count);
-        for (var i = 0; i < Count; i++) result[i] = this[i].Key;
+        for (var i = 0; i < Count; i++) result.Add(this[i].Key);
         return result;
     }
 
+    /// <summary>
+    /// Extracts only the values (B part) from a list of AB pairs.
+    /// </summary>
+    /// <param name="list">The list of AB pairs to extract values from.</param>
+    /// <returns>A list of objects containing all values.</returns>
     public static List<object> OnlyBs(List<AB> list)
     {
         return list.Select(element => element.Value).ToList();

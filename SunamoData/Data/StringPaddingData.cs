@@ -1,50 +1,56 @@
 namespace SunamoData.Data;
 
+/// <summary>
+/// Data about string padding characters at specific positions.
+/// </summary>
 public class StringPaddingData
 {
     /// <summary>
-    ///     [0]
+    /// Gets or sets whether to check the first character [0].
     /// </summary>
-    public bool First = false;
+    public bool First { get; set; } = false;
 
     /// <summary>
-    ///     [0]
+    /// Gets or sets the expected first character [0].
     /// </summary>
-    public char FirstChar = 'a';
+    public char FirstChar { get; set; } = 'a';
 
     /// <summary>
-    ///     [Length-1] (really last / poslední)
+    /// Gets or sets whether to check the last character [Length-1].
     /// </summary>
-    public bool Last = false;
+    public bool Last { get; set; } = false;
 
     /// <summary>
-    ///     [Length-1] (really last / poslední)
+    /// Gets or sets the expected last character [Length-1].
     /// </summary>
-    public char LastChar = 'a';
+    public char LastChar { get; set; } = 'a';
 
-    public string Text = null;
+    /// <summary>
+    /// Gets or sets the text to be validated.
+    /// </summary>
+    public string Text { get; set; } = "";
 
     #region for cases like "xxx: "
 
     /// <summary>
-    ///     [1]
+    /// Gets or sets whether to check the second character [1].
     /// </summary>
-    public bool First2 = false;
+    public bool First2 { get; set; } = false;
 
     /// <summary>
-    ///     [Length-2] (penultimate / předposlední)
+    /// Gets or sets whether to check the penultimate character [Length-2].
     /// </summary>
-    public bool Last2 = false;
+    public bool Last2 { get; set; } = false;
 
     /// <summary>
-    ///     [1]
+    /// Gets or sets the expected second character [1].
     /// </summary>
-    public char FirstChar2 = 'a';
+    public char FirstChar2 { get; set; } = 'a';
 
     /// <summary>
-    ///     [Length-2] (penultimate / předposlední)
+    /// Gets or sets the expected penultimate character [Length-2].
     /// </summary>
-    public char LastChar2 = 'a';
+    public char LastChar2 { get; set; } = 'a';
 
     #endregion
 }
