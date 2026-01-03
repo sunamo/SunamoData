@@ -21,12 +21,12 @@ public class TextFormatData : List<CharFormatData>
     /// Initializes a new instance of the <see cref="TextFormatData"/> class.
     /// Set requiredLength to -1 if text can have any length.
     /// </summary>
-    /// <param name="isTrimming">Whether to trim the text before validation.</param>
+    /// <param name="trimBefore">Whether to trim the text before validation.</param>
     /// <param name="requiredLength">The exact required length (-1 for any length).</param>
     /// <param name="formatDataItems">Array of character format data items.</param>
-    public TextFormatData(bool isTrimming, int requiredLength, params CharFormatData[] formatDataItems)
+    public TextFormatData(bool trimBefore, int requiredLength, params CharFormatData[] formatDataItems)
     {
-        this.TrimBefore = isTrimming;
+        this.TrimBefore = trimBefore;
         this.RequiredLength = requiredLength;
         AddRange(formatDataItems);
     }
