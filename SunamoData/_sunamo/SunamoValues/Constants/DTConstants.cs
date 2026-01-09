@@ -1,3 +1,4 @@
+// variables names: ok
 namespace SunamoData._sunamo.SunamoValues.Constants;
 
 internal class DTConstants
