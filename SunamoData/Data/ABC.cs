@@ -119,7 +119,7 @@ public class ABC : List<AB>
     public List<object> OnlyBsList()
     {
         var result = new List<object>(Count);
-        for (var i = 0; i < Count; i++) result.Add(this[i].Value);
+        for (var i = 0; i < Count; i++) result.Add(this[i].B);
         return result;
     }
 
@@ -130,7 +130,7 @@ public class ABC : List<AB>
     public List<string> OnlyAs()
     {
         var result = new List<string>(Count);
-        for (var i = 0; i < Count; i++) result.Add(this[i].Key);
+        for (var i = 0; i < Count; i++) result.Add(this[i].A);
         return result;
     }
 
@@ -141,6 +141,6 @@ public class ABC : List<AB>
     /// <returns>A list of objects containing all values.</returns>
     public static List<object> OnlyBs(List<AB> list)
     {
-        return list.Select(element => element.Value).ToList();
+        return list.Select(element => element.B).ToList();
     }
 }

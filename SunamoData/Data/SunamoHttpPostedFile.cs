@@ -72,6 +72,6 @@ public class SunamoHttpPostedFile
     /// <param name="filename">The path where the file should be saved.</param>
     public async Task SaveAs(string filename)
     {
-        await File.WriteAllBytesAsync(filename, Bytes.ToArray());
+        await Task.Run(() => File.WriteAllBytes(filename, Bytes.ToArray()));
     }
 }

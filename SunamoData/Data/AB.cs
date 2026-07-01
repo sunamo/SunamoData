@@ -13,12 +13,12 @@ public class AB
     /// <summary>
     /// Gets or sets the key.
     /// </summary>
-    public string Key { get; set; }
+    public string A { get; set; }
 
     /// <summary>
     /// Gets or sets the value.
     /// </summary>
-    public object Value { get; set; }
+    public object B { get; set; }
 
     /// <summary>
     /// Initializes a new instance of the <see cref="AB"/> class.
@@ -27,8 +27,8 @@ public class AB
     /// <param name="value">The value.</param>
     public AB(string key, object value)
     {
-        Key = key;
-        Value = value;
+        A = key;
+        B = value;
     }
 
     /// <summary>
@@ -59,6 +59,6 @@ public class AB
     /// <returns>A string representation of the key-value pair.</returns>
     public override string ToString()
     {
-        return Key + ":" + Value;
+        return A + ":" + B;
     }
 }
