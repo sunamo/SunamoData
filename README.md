@@ -1,5 +1,10 @@
 # SunamoData
 
+## Short description
+
+Sdílená knihovna instančních datových tříd, které používají ostatní balíčky sady Sunamo.
+
+
 Shared packages across packages with instance data-holder classes
 
 ## Overview
