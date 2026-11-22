@@ -11,4 +11,14 @@ public class TUList<T, U> : List<TU<T, U>>
     /// Gets the list as itself (convenience property for compatibility).
     /// </summary>
     public List<TU<T, U>> List => this;
+
+    /// <summary>
+    /// Adds a pair made of the key and the value.
+    /// </summary>
+    /// <param name="key">The key of the pair.</param>
+    /// <param name="value">The value of the pair.</param>
+    public void Add(T key, U value)
+    {
+        Add(new TU<T, U>(key, value));
+    }
 }

@@ -41,6 +41,8 @@ public class FoundedCodeElement : IComparable<FoundedCodeElement>
     /// <returns>Currently returns 0 (elements are considered equal).</returns>
     public int CompareTo(FoundedCodeElement? other)
     {
-        return 0;
+        if (other is null) return 1;
+        var byLine = Line.CompareTo(other.Line);
+        return byLine != 0 ? byLine : From.CompareTo(other.From);
     }
 }
