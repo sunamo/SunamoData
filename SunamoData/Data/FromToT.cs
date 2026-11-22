@@ -126,7 +126,7 @@ public class FromToT<T> : IParser where T : struct
         if (text.Contains(":"))
         {
             var parts = text.Split(':').ToList()
-                .ConvertAll(element => int.Parse(element)); //SHSplit.SplitToIntList(text, new String[] { ":" });
+                .ConvertAll(element => int.TryParse(element, out var number) ? number : 0);
             result += parts[0] * (int)DTConstants.SecondsInHour;
             if (parts.Count > 1) result += parts[1] * (int)DTConstants.SecondsInMinute;
         }
