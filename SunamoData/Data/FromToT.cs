@@ -94,7 +94,7 @@ public class FromToT<T> : IParser where T : struct
         else
             parts = new List<string>(new[] { text });
         if (parts[0] == "0") parts[0] = "00:01";
-        if (parts[1] == "24") parts[1] = "23:59";
+        if (parts.Count > 1 && parts[1] == "24") parts[1] = "23:59";
         var fromSeconds = (long)ReturnSecondsFromTimeFormat(parts[0]);
         fromLong = fromSeconds;
         if (parts.Count > 1)
