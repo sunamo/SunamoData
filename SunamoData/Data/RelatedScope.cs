@@ -1,8 +1,7 @@
 namespace SunamoData.Data;
 
 /// <summary>
-///     EN: null is neutral (if has before and after same state, is considered as this state)
-///     CZ: null is neutral(if has before and after same state, is considered as this state)
+///     null is neutral (if has before and after same state, is considered as this state)
 /// </summary>
 public class RelatedScope
 {

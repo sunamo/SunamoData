@@ -39,4 +39,25 @@ public class FromTo : FromToT<long>
         To = to;
         FromToUse = fromToUse;
     }
+
+    /// <summary>
+    /// Formats the range as "H:mm-H:mm", where the values are seconds since midnight; an all-zero range gives an empty string.
+    /// </summary>
+    /// <returns>The formatted range.</returns>
+    protected override string ToStringDateTime()
+    {
+        if (FromLong == 0 && ToLong == 0)
+            return string.Empty;
+        return FormatSeconds(FromLong) + "-" + FormatSeconds(ToLong);
+    }
+
+    /// <summary>
+    /// Formats seconds since midnight as "H:mm".
+    /// </summary>
+    /// <param name="seconds">The seconds since midnight.</param>
+    /// <returns>The time text.</returns>
+    private static string FormatSeconds(long seconds)
+    {
+        return seconds / 3600 + ":" + (seconds % 3600 / 60).ToString("00");
+    }
 }
