@@ -30,4 +30,17 @@ public class FromToTests
         Assert.True(fromTo.IsFilledWithData());
         Assert.Equal("9:05-23:59", fromTo.ToString());
     }
+
+    /// <summary>
+    /// Tests that text which is not a time does not throw and gives no data.
+    /// </summary>
+    [Fact]
+    public void ParseGarbageTest()
+    {
+        var fromTo = new FromTo();
+        fromTo.Parse("abc");
+        Assert.False(fromTo.IsFilledWithData());
+        fromTo.Parse("x:y-z");
+        Assert.False(fromTo.IsFilledWithData());
+    }
 }
